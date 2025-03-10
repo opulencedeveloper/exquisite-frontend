@@ -1,0 +1,222 @@
+.custom-sign-up-btn {
+  display: none;
+}
+
+.accordion-container {
+  width: 100%;
+}
+
+.accordion {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.accordion:hover {
+  border-color: #fcb42d;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between; /* Space between text and caret */
+  align-items: center;
+  padding: 25px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: white;
+  user-select: none;
+  color: black;
+}
+
+/* .accordion-header.active {
+  background-color: #e0e0e0;
+} */
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  padding: 0 25px;
+  background-color: #fff;
+}
+
+.accordion-content p {
+  margin: 0;
+  padding: 0px 0px 25px 0px;
+}
+
+/* Caret icon style */
+.caret {
+  transition: transform 0.3s ease-out; /* Smooth rotation of caret */
+}
+
+/* Rotate the caret when accordion is active */
+.accordion-header.active .caret {
+  transform: rotate(180deg); /* Rotate 180 degrees when active */
+}
+
+@media (max-width: 960px) {
+  .custom-sign-up-btn {
+    transform: translateY(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .accordion-header {
+    font-size: 16px;
+  }
+}
+
+.menu-link-color {
+  color: #6c757d;
+}
+
+.menu-link:hover .menu-link-color {
+  color: #fcb42d;
+}
+.btn-success {
+  background-color: #fcb42d;
+  border: 1px solid #fcb42d;
+  border-radius: 20px;
+}
+.btn-success:hover {
+  background-color: #fcb42d;
+  border: 1px solid #fcb42d;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+/* .navbar-custom {
+  background-color: white;
+} */
+.Confirm-deposit-table {
+  width: 100%;
+  height: max-content;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Confirm-deposit-table div {
+  width: 100%;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.Confirm-deposit-table div p:nth-child(1) {
+  font-size: 15px;
+  font-weight: 500;
+  color: #6c757d;
+  width: 50%;
+}
+.Confirm-deposit-table div p:nth-child(2) {
+  font-size: 15px;
+  font-weight: 500;
+  color: #6c757d;
+  width: 50%;
+}
+.copy-link {
+  transition: all 0.3s;
+  width: 80px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  color: inherit;
+  border-radius: 8px;
+}
+.copy-link:hover {
+  transform: scale(1.05);
+}
+.refferal-link {
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: max-content;
+  max-width: calc(100%-100px);
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 10px;
+}
+.refferal-link p {
+  width: max-content;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 45px;
+}
+.edit-profile-row {
+  width: max-content;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+.edit-profile-row p {
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.edit-profile-row p:nth-child(1) {
+  width: 200px;
+  max-width: 100%;
+}
+.edit-profile-row input {
+  width: 300px;
+  max-width: 100%;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: inherit;
+  padding: 0 10px;
+  background-color: transparent;
+}
+.update-profile-button {
+  width: max-content;
+  background-color: #fcb42d;
+  height: 40px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 25px;
+  border: 1px solid #fcb42d;
+}
+
+@media (max-width: 600px) {
+  .edit-profile-row {
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  .edit-profile-row p:nth-child(1) {
+    width: max-content;
+  }
+  .edit-profile-row input {
+    width: 100%;
+    height: 40px;
+  }
+  .update-profile-button {
+    width: 100%;
+  }
+}
+/* Hide the Google Translate logo if desired */
+.goog-logo-link {
+  display: none !important;
+}
+/* Adjust the size of the translation dropdown */
+.goog-te-combo {
+  width: 100px;
+  font-size: 14px;
+}

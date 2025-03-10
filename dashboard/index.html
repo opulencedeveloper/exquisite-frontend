@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en" data-topbar-color="dark">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dashboard - Exquisite Investment Limited</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta content="Exquisite Investment Limited" name="author" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <!-- touch icon -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="../img/apple-touch-icon.png"
+    />
+
+    <!-- Theme Config Js -->
+    <script src="../dashboard-assets/js/head.js"></script>
+
+    <!-- Bootstrap css -->
+    <link
+      href="../dashboard-assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+      id="app-style"
+    />
+
+    <!-- App css -->
+    <link
+      href="../dashboard-assets/css/app.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link rel="stylesheet" href="../css/new-styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/39a80cd06c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <script
+    src="//code.tidio.co/sfxhzkzkxmnwwed1jgstaplxlalzsrud.js"
+    async
+  ></script>
+
+  <body>
+    <!-- Begin page -->
+    <div id="wrapper">
+      <!-- ========== Menu ========== -->
+      <div class="app-menu">
+        <!-- Brand Logo -->
+        <div class="logo-box"></div>
+
+        <!-- menu-left -->
+        <div class="scrollbar">
+          <!-- User box -->
+          <!-- <div class="user-box text-center">
+            <img
+              src="../dashboard-assets/images/users/user-1.jpg"
+              alt="user-img"
+              title="Mat Helme"
+              class="rounded-circle avatar-md"
+            />
+            <div class="dropdown">
+              <a
+                href="javascript: void(0);"
+                class="dropdown-toggle h5 mb-1 d-block"
+                data-bs-toggle="dropdown"
+                >Promise Onuoha</a
+              >
+              <div class="dropdown-menu user-pro-dropdown">
+                
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                  <i class="fe-user me-1"></i>
+                  <span>My Account</span>
+                </a>
+
+            
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                  <i class="fe-settings me-1"></i>
+                  <span>Settings</span>
+                </a>
+
+              
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                  <i class="fe-lock me-1"></i>
+                  <span>Lock Screen</span>
+                </a>
+
+                
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                  <i class="fe-log-out me-1"></i>
+                  <span>Logout</span>
+                </a>
+              </div>
+            </div>
+            <p class="text-muted mb-0">Admin Head</p>
+          </div>  -->
+
+          <!--- Menu -->
+          <ul class="menu">
+            <li class="menu-title">Main</li>
+
+            <li class="menu-item">
+              <a href="/dashboard/" class="menu-link">
+                <span class="menu-icon"
+                  ><i style="font-size: 13px" class="fa-solid fa-tv"></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text">
+                  Dashboard
+                </span>
+              </a>
+            </li>
+
+            <li class="menu-title">Finances</li>
+
+            <li class="menu-item">
+              <a
+                href="#menuEcommerce"
+                data-bs-toggle="collapse"
+                class="menu-link"
+              >
+                <span class="menu-icon"
+                  ><i
+                    style="font-size: 13px"
+                    class="fa-solid fa-dollar-sign"
+                  ></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text">
+                  Transactions
+                </span>
+                <span class="menu-arrow">
+                  <i
+                    style="font-size: 11px"
+                    class="fa-solid fa-angle-right"
+                  ></i>
+                </span>
+              </a>
+              <div class="collapse" id="menuEcommerce">
+                <ul class="sub-menu">
+                  <li class="menu-item">
+                    <a href="/deposit/" class="menu-link">
+                      <span style="font-size: 14px" class="menu-text"
+                        >Deposit Funds</span
+                      >
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/withdraw" class="menu-link">
+                      <span style="font-size: 14px" class="menu-text"
+                        >Withdraw Funds</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="menu-title">Account Summary</li>
+
+            <li class="menu-item">
+              <a href="#menuAuth" data-bs-toggle="collapse" class="menu-link">
+                <span class="menu-icon"
+                  ><i
+                    style="font-size: 13px"
+                    class="fa-solid fa-clock-rotate-left"
+                  ></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text"> History </span>
+                <span class="menu-arrow r">
+                  <i style="font-size: 11px" class="fa-solid fa-angle-right"></i
+                ></span>
+              </a>
+              <div class="collapse collapse-md" id="menuAuth">
+                <ul class="sub-menu">
+                  <li class="menu-item">
+                    <a href="/deposit-history/" class="menu-link">
+                      <span style="font-size: 14px" class="menu-text r"
+                        >Deposit History</span
+                      >
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/withdrawal-history" class="menu-link">
+                      <span style="font-size: 14px" class="menu-text"
+                        >Withdrawal History</span
+                      >
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/commisions" class="menu-link">
+                      <span class="menu-text">Commisions</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="menu-title">Referrals</li>
+
+            <li class="menu-item">
+              <a href="/referrals" class="menu-link">
+                <span class="menu-icon"
+                  ><i style="font-size: 13px" class="ri-links-line"></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text">
+                  Referrals
+                </span>
+              </a>
+            </li>
+
+            <li class="menu-title">Settings</li>
+            <li class="menu-item">
+              <a href="/edit-profile/" class="menu-link">
+                <span class="menu-icon"
+                  ><i style="font-size: 13px" class="fa-solid fa-gears"></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text"> Profile </span>
+              </a>
+            </li>
+            <li class="menu-item" onclick="handleLogout()">
+              <a href="#" class="menu-link">
+                <span class="menu-icon menu-link-color"
+                  ><i
+                    style="font-size: 13px"
+                    class="fa-solid fa-right-from-bracket"
+                  ></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text menu-link-color">
+                  Logout
+                </span>
+              </a>
+            </li>
+          </ul>
+          <!--- End Menu -->
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- ========== Left menu End ========== -->
+
+      <!-- ============================================================== -->
+      <!-- Start Page Content here -->
+      <!-- ============================================================== -->
+
+      <div class="content-page">
+        <!-- ========== Topbar Start ========== -->
+        <div class="navbar-custom">
+          <div class="topbar">
+            <div class="topbar-menu d-flex align-items-center gap-1">
+              <!-- Sidebar Menu Toggle Button -->
+              <button class="button-toggle-menu">
+                <i style="font-size: 14px" class="fa-solid fa-bars"></i>
+              </button>
+
+              <!-- Dropdown Menu -->
+              <!-- <div class="dropdown d-none d-xl-block">
+                <a
+                  class="nav-link dropdown-toggle waves-effect waves-light"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="false"
+                  aria-expanded="false"
+                >
+                  Deposit Funds
+                </a>
+              </div> -->
+            </div>
+
+            <ul class="topbar-menu d-flex align-items-center">
+              <!-- Light/Dark Mode Toggle Button -->
+              <li class="d-inline-block d-sm-inline-block">
+                <div
+                  class="nav-link waves-effect waves-light"
+                  id="light-dark-mode"
+                >
+                  <i style="font-size: 20px" class="ri-moon-line"></i>
+                </div>
+              </li>
+
+              <!-- User Dropdown -->
+              <li class="dropdown inline-block">
+                <a
+                  class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="false"
+                  aria-expanded="false"
+                >
+                  <span class="ms-1 inline-block">
+                    <span id="fullName"></span> &nbsp;
+                    <i style="font-size: 11px" class="fas fa-angle-down"></i>
+                  </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end profile-dropdown">
+                  <!-- item-->
+                  <a href="/edit-profile/" class="dropdown-item notify-item">
+                    <i class="fas fa-gears"></i> &nbsp;
+                    <span>My Profile</span>
+                  </a>
+
+                  <div class="dropdown-divider"></div>
+
+                  <!-- item-->
+                  <a
+                    href="#"
+                    onclick="handleLogout()"
+                    class="dropdown-item notify-item"
+                  >
+                    <i class="fas fa-right-from-bracket"></i> &nbsp;
+                    <span>Logout</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- ========== Topbar End ========== -->
+
+        <div class="content">
+          <!-- Start Content-->
+          <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+              <div class="col-12">
+                <div class="page-title-box">
+                  <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                      <li class="breadcrumb-item">
+                        <a style="color: #fcb42d" href="#">Home </a>
+                      </li>
+
+                      <li class="breadcrumb-item active">
+                        <i
+                          style="font-size: 9px"
+                          class="fas fa-angle-right"
+                        ></i>
+                      </li>
+
+                      <li class="breadcrumb-item active">Dashboard</li>
+                    </ol>
+                  </div>
+                  <h4 class="page-title">Dashboard</h4>
+                </div>
+              </div>
+            </div>
+            <!-- end page title -->
+
+            <div class="row">
+              <div class="col-md-6 col-xl-3">
+                <div class="card" id="tooltip-container">
+                  <div class="card-body">
+                    <i
+                      class="fa fa-info-circle text-muted float-end"
+                      data-bs-container="#tooltip-container"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="bottom"
+                      title="Total amount of active Investment"
+                    ></i>
+                    <h4 class="mt-0 font-16">Active Deposits</h4>
+                    <h2 class="text-primary my-3 text-center">
+                      <span style="color: #fcb42d">$</span>
+                      <span
+                        id="activeDeposit"
+                        style="color: #fcb42d"
+                        data-plugin="counterup"
+                        >0</span
+                      >
+                    </h2>
+                    <p class="text-muted mb-0">Total Active Invest</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xl-3">
+                <div class="card" id="tooltip-container1">
+                  <div class="card-body">
+                    <i
+                      class="fa fa-info-circle text-muted float-end"
+                      data-bs-container="#tooltip-container1"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="bottom"
+                      title="Total amount of profit made"
+                    ></i>
+                    <h4 class="mt-0 font-16">Profit</h4>
+                    <h2 class="text-primary my-3 text-center">
+                      <span style="color: #fcb42d">$</span
+                      ><span
+                        id="profit"
+                        style="color: #fcb42d"
+                        data-plugin="counterup"
+                        >0</span
+                      >
+                    </h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xl-3">
+                <div class="card" id="tooltip-container2">
+                  <div class="card-body">
+                    <i
+                      class="fa fa-info-circle text-muted float-end"
+                      data-bs-container="#tooltip-container2"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="bottom"
+                      title="Number of Referrals"
+                    ></i>
+                    <h4 class="mt-0 font-16">Referrals</h4>
+                    <h2 class="text-primary my-3 text-center">
+                      <span
+                        id="referrals"
+                        style="color: #fcb42d"
+                        data-plugin="counterup"
+                        >0</span
+                      >
+                    </h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xl-3">
+                <div class="card" id="tooltip-container3">
+                  <div class="card-body">
+                    <i
+                      class="fa fa-info-circle text-muted float-end"
+                      data-bs-container="#tooltip-container3"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="bottom"
+                      title="Total amount earn on referrals"
+                    ></i>
+                    <h4 class="mt-0 font-16">Referral Commisions</h4>
+                    <h2 class="text-primary my-3 text-center">
+                      <span style="color: #fcb42d">$</span
+                      ><span
+                        id="referralCommisions"
+                        style="color: #fcb42d"
+                        data-plugin="counterup"
+                        >0</span
+                      >
+                    </h2>
+                    <p class="text-muted mb-0">
+                      Total amount earn on referrals
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="header-title">Live Crypto Prices</h4>
+
+                    <div
+                      id="basic-datatable_wrapper"
+                      class="dataTables_wrapper dt-bootstrap5 no-footer"
+                    >
+                      <div
+                        style="
+                          overflow-x: auto;
+                          max-height: 80vh;
+                          overflow-y: auto;
+                        "
+                        class="row tableScrollbar"
+                      >
+                        <div class="col-sm-12" style="min-width: 850px">
+                          <table
+                            id="basic-datatable"
+                            class="table dt-responsive nowrap w-100 dataTable no-footer dtr-inline"
+                            aria-describedby="basic-datatable_info"
+                            style="width: 1010px"
+                          >
+                            <thead>
+                              <tr>
+                                <th tabindex="0" rowspan="1" colspan="1">
+                                  Cryptocurrency
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">
+                                  Price (USD)
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">
+                                  24h Change
+                                </th>
+                                <th tabindex="0" rowspan="1" colspan="1">
+                                  Market Cap
+                                </th>
+                              </tr>
+                            </thead>
+
+                            <tbody></tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end card body-->
+                </div>
+                <!-- end card -->
+              </div>
+              <!-- end col-->
+            </div>
+          </div>
+          <!-- container -->
+        </div>
+        <!-- content -->
+
+        <!-- Footer Start -->
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <div>
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  © Exclusive Investment Limited
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div
+                  class="d-none d-md-flex gap-4 align-item-center justify-content-md-end footer-links"
+                >
+                  <a href="/about/">About</a>
+                  <a href="/rules/">Rules</a>
+                  <a href="/contact/">Contact Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="google_translate_element"
+            style="position: fixed; bottom: 20px; left: 20px; z-index: 400"
+          ></div>
+        </footer>
+        <!-- end Footer -->
+      </div>
+    </div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+
+    <script src="../dashboard-assets/js/vendor.min.js"></script>
+
+    <!-- App js -->
+    <script src="../dashboard-assets/js/app.min.js"></script>
+
+    <!-- Chat app -->
+    <script src="../dashboard-assets/js/pages/jquery.chat.js"></script>
+
+    <!-- Todo app -->
+    <script src="../dashboard-assets/js/pages/jquery.todo.js"></script>
+
+    <!-- Dashboard init JS -->
+    <script src="../dashboard-assets/js/pages/dashboard-3.init.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async function () {
+        const token = localStorage.getItem("token");
+        if (!token) {
+          window.location.href = "/login";
+        } else {
+          var requestOptions = {
+            method: "GET",
+            redirect: "follow",
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          };
+
+          try {
+            let request = await fetch(
+              "https://exquisute-backend.onrender.com/api/v1/user",
+              requestOptions
+            );
+            let response = await request.json();
+
+            if (request.ok) {
+              document.getElementById("fullName").textContent =
+                response?.data?.fullName;
+              document.getElementById("activeDeposit").textContent =
+                response?.data?.activeDeposit;
+              document.getElementById("profit").textContent =
+                response?.data?.profit;
+              document.getElementById("referrals").textContent =
+                response?.data?.referrals;
+              document.getElementById("referralCommisions").textContent =
+                response?.data?.referralCommisions;
+            } else {
+              Toastify({
+                text: response?.description || "Failed to fetch user details",
+                duration: 3000,
+                gravity: "top",
+                position: "center",
+                backgroundColor: "#dc3545",
+              }).showToast();
+
+              if (response?.description === "Not authenticated") {
+                localStorage.removeItem("token");
+                window.location.href = "/login";
+              }
+            }
+          } catch (error) {
+            Toastify({
+              text: error?.message || "Failed to fetch user details",
+              duration: 3000,
+              gravity: "top",
+              position: "center",
+              backgroundColor: "#dc3545",
+            }).showToast();
+          }
+
+          const apiUrl = "https://api.coingecko.com/api/v3/coins/markets";
+          const params = {
+            vs_currency: "usd",
+            order: "market_cap_desc",
+            per_page: 250, // Fetch 250 cryptocurrencies
+            page: 1,
+            sparkline: false,
+          };
+
+          async function fetchCryptoData() {
+            const url = new URL(apiUrl);
+            Object.keys(params).forEach((key) =>
+              url.searchParams.append(key, params[key])
+            );
+            try {
+              const response = await fetch(url);
+              if (response.ok) {
+                const data = await response.json();
+                updateTable(data);
+              } else {
+                console.error("Error fetching data:", response.statusText);
+              }
+            } catch (error) {
+              console.error("Fetch error:", error);
+            }
+          }
+
+          function updateTable(data) {
+            const tbody = document
+              .getElementById("basic-datatable")
+              .getElementsByTagName("tbody")[0];
+            tbody.innerHTML = ""; // Clear previous table rows
+            data.forEach((coin) => {
+              const row = tbody.insertRow();
+
+              // Add crypto image and name
+              const imageCell = row.insertCell(0);
+              const img = document.createElement("img");
+              img.src = coin.image; // Crypto image URL
+              img.alt = coin.name;
+              img.width = 20; // Adjust size as necessary
+              img.height = 20;
+              const name = document.createElement("span");
+              name.textContent = ` ${coin.name}`;
+              imageCell.appendChild(img);
+              imageCell.appendChild(name);
+
+              // Add price
+              row.insertCell(1).textContent = `$${coin.current_price.toFixed(
+                2
+              )}`;
+
+              // Add 24h price change
+              row.insertCell(
+                2
+              ).textContent = `${coin.price_change_percentage_24h.toFixed(2)}%`;
+
+              // Add market cap
+              row.insertCell(
+                3
+              ).textContent = `$${coin.market_cap.toLocaleString()}`;
+            });
+          }
+
+          // Fetch data every 60 seconds
+          setInterval(fetchCryptoData, 60000);
+          // Initial fetch
+          fetchCryptoData();
+        }
+      });
+      function handleLogout() {
+        localStorage.removeItem("token");
+        window.location.href = "/login";
+      }
+    </script>
+  </body>
+</html>

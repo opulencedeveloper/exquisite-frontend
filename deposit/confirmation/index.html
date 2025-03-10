@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en" data-topbar-color="dark">
+  <head>
+    <meta charset="utf-8" />
+    <title>Deposit Funds - Exquisite Investment Limited</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta content="Exquisite Investment Limited" name="author" />
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="../../img/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- touch icon -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="../../img/apple-touch-icon.png"
+    />
+
+    <!-- Theme Config Js -->
+    <script src="../../dashboard-assets/js/head.js"></script>
+
+    <!-- Bootstrap css -->
+    <link
+      href="../../dashboard-assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+      id="app-style"
+    />
+
+    <!-- App css -->
+    <link
+      href="../../dashboard-assets/css/app.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link rel="stylesheet" href="../../css/new-styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/39a80cd06c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <script
+    src="//code.tidio.co/sfxhzkzkxmnwwed1jgstaplxlalzsrud.js"
+    async
+  ></script>
+
+  <body>
+    <!-- Begin page -->
+    <div id="wrapper">
+      <!-- ========== Menu ========== -->
+      <div class="app-menu">
+        <!-- Brand Logo -->
+        <div class="logo-box">
+          <!-- Brand Logo Dark -->
+          <!-- <a href="index.html" class="logo-dark">
+            <img src="../../img/user/logo.png" alt="dark logo" class="logo-lg" />
+            <img src="../../img/user/logo.png" alt="small logo" class="logo-sm" />
+          </a> -->
+        </div>
+
+        <!-- menu-left -->
+        <div class="scrollbar">
+          <!-- User box -->
+          <!-- <div class="user-box text-center">
+            <img
+              src="assets/images/users/user-1.jpg"
+              alt="user-img"
+              title="Mat Helme"
+              class="rounded-circle avatar-md"
+            />
+            <div class="dropdown">
+              <a
+                href="javascript: void(0);"
+                class="dropdown-toggle h5 mb-1 d-block"
+                data-bs-toggle="dropdown"
+                >Promise Onuoha</a
+              >
+              <div class="dropdown-menu user-pro-dropdown">
+                
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                  <i class="fe-user me-1"></i>
+                  <span>My Account</span>
+                </a>
+
+            
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                  <i class="fe-settings me-1"></i>
+                  <span>Settings</span>
+                </a>
+
+              
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                  <i class="fe-lock me-1"></i>
+                  <span>Lock Screen</span>
+                </a>
+
+                
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                  <i class="fe-log-out me-1"></i>
+                  <span>Logout</span>
+                </a>
+              </div>
+            </div>
+            <p class="text-muted mb-0">Admin Head</p>
+          </div>  -->
+
+          <!--- Menu -->
+          <ul class="menu">
+            <li class="menu-title">Main</li>
+
+            <li class="menu-item">
+              <a href="/dashboard/" class="menu-link">
+                <span class="menu-icon"
+                  ><i style="font-size: 13px" class="fa-solid fa-tv"></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text">
+                  Dashboard
+                </span>
+              </a>
+            </li>
+
+            <li class="menu-title">Finances</li>
+
+            <li class="menu-item">
+              <a
+                href="#menuEcommerce"
+                data-bs-toggle="collapse"
+                class="menu-link"
+              >
+                <span class="menu-icon"
+                  ><i
+                    style="font-size: 13px; color: #fcb42d"
+                    class="fa-solid fa-dollar-sign"
+                  ></i
+                ></span>
+                <span style="font-size: 14px; color: #fcb42d" class="menu-text">
+                  Transactions
+                </span>
+                <span class="menu-arrow">
+                  <i
+                    style="font-size: 11px; color: #fcb42d"
+                    class="fa-solid fa-angle-right"
+                  ></i>
+                </span>
+              </a>
+              <div class="collapse" id="menuEcommerce">
+                <ul class="sub-menu">
+                  <li class="menu-item">
+                    <a href="/deposit/" class="menu-link">
+                      <span
+                        style="font-size: 14px; color: #fcb42d"
+                        class="menu-text"
+                        >Deposit Funds</span
+                      >
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/withdraw" class="menu-link">
+                      <span style="font-size: 14px" class="menu-text"
+                        >Withdraw Funds</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="menu-title">Account Summary</li>
+
+            <li class="menu-item">
+              <a href="#menuAuth" data-bs-toggle="collapse" class="menu-link">
+                <span class="menu-icon"
+                  ><i
+                    style="font-size: 13px"
+                    class="fa-solid fa-clock-rotate-left"
+                  ></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text"> History </span>
+                <span class="menu-arrow">
+                  <i style="font-size: 11px" class="fa-solid fa-angle-right"></i
+                ></span>
+              </a>
+              <div class="collapse collapse-md" id="menuAuth">
+                <ul class="sub-menu">
+                  <li class="menu-item">
+                    <a href="/deposit-history/" class="menu-link">
+                      <span style="font-size: 14px" class="menu-text"
+                        >Deposit History</span
+                      >
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/withdrawal-history" class="menu-link">
+                      <span style="font-size: 14px" class="menu-text"
+                        >Withdrawal History</span
+                      >
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/commisions" class="menu-link">
+                      <span class="menu-text">Commisions</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="menu-title">Referrals</li>
+
+            <li class="menu-item">
+              <a href="/referrals/" class="menu-link">
+                <span class="menu-icon"
+                  ><i style="font-size: 13px" class="ri-links-line"></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text">
+                  Referrals
+                </span>
+              </a>
+            </li>
+
+            <li class="menu-title">Settings</li>
+            <li class="menu-item">
+              <a href="/edit-profile/" class="menu-link">
+                <span class="menu-icon"
+                  ><i style="font-size: 13px" class="fa-solid fa-gears"></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text"> Profile </span>
+              </a>
+            </li>
+            <li class="menu-item" onclick="handleLogout()">
+              <a href="#" class="menu-link">
+                <span class="menu-icon"
+                  ><i
+                    style="font-size: 13px"
+                    class="fa-solid fa-right-from-bracket"
+                  ></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text"> Logout </span>
+              </a>
+            </li>
+          </ul>
+          <!--- End Menu -->
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- ========== Left menu End ========== -->
+
+      <!-- ============================================================== -->
+      <!-- Start Page Content here -->
+      <!-- ============================================================== -->
+
+      <div class="content-page">
+        <!-- ========== Topbar Start ========== -->
+        <div class="navbar-custom">
+          <div class="topbar">
+            <div class="topbar-menu d-flex align-items-center gap-1">
+              <!-- Sidebar Menu Toggle Button -->
+              <button class="button-toggle-menu">
+                <i style="font-size: 14px" class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+
+            <ul class="topbar-menu d-flex align-items-center">
+              <!-- Fullscreen Button -->
+
+              <!-- Light/Dark Mode Toggle Button -->
+              <li class="d-inline-block d-sm-inline-block">
+                <div
+                  class="nav-link waves-effect waves-light"
+                  id="light-dark-mode"
+                >
+                  <i style="font-size: 20px" class="ri-moon-line"></i>
+                </div>
+              </li>
+
+              <!-- User Dropdown -->
+              <li class="dropdown inline-block">
+                <a
+                  class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="false"
+                  aria-expanded="false"
+                >
+                  <span class="ms-1 inline-block">
+                    <span id="fullName"></span> &nbsp;
+                    <i style="font-size: 11px" class="fas fa-angle-down"></i>
+                  </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end profile-dropdown">
+                  <!-- item-->
+                  <a href="/edit-profile/" class="dropdown-item notify-item">
+                    <i class="fas fa-gears"></i> &nbsp;
+                    <span>My Profile</span>
+                  </a>
+
+                  <div class="dropdown-divider"></div>
+
+                  <!-- item-->
+                  <a
+                    href="#"
+                    onclick="handleLogout()"
+                    class="dropdown-item notify-item"
+                  >
+                    <i class="fas fa-right-from-bracket"></i> &nbsp;
+                    <span>Logout</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- ========== Topbar End ========== -->
+
+        <div class="content">
+          <!-- Start Content-->
+          <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+              <div class="col-12">
+                <div class="page-title-box">
+                  <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                      <li class="breadcrumb-item">
+                        <a style="color: #fcb42d" href="/dashboard/">Home </a>
+                      </li>
+
+                      <li class="breadcrumb-item active">
+                        <i
+                          style="font-size: 9px"
+                          class="fas fa-angle-right"
+                        ></i>
+                      </li>
+
+                      <li class="breadcrumb-item">
+                        <a style="color: #fcb42d" href="/deposit/">Deposit</a>
+                      </li>
+                      <li class="breadcrumb-item active">
+                        <i
+                          style="font-size: 9px"
+                          class="fas fa-angle-right"
+                        ></i>
+                      </li>
+
+                      <li class="breadcrumb-item active">Confirmation</li>
+                    </ol>
+                  </div>
+                  <h4 class="page-title">Confirm Deposit</h4>
+                </div>
+              </div>
+            </div>
+            <!-- end page title -->
+          </div>
+          <!-- container -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <!-- end col-->
+                    <div class="col-lg-12">
+                      <div class="tab-content p-3">
+                        <div
+                          class="tab-pane fade active show"
+                          id="custom-v-pills-billing"
+                          role="tabpanel"
+                          aria-labelledby="custom-v-pills-billing-tab"
+                        >
+                          <div>
+                            <h4 class="header-title">Deposit Confirmation</h4>
+                          </div>
+                        </div>
+                        <div class="Confirm-deposit-table">
+                          <div>
+                            <p>
+                              <b>Plan:</b>
+                            </p>
+                            <p id="plan"></p>
+                          </div>
+                          <div>
+                            <p>
+                              <b>Method:</b>
+                            </p>
+                            <p id="method"></p>
+                          </div>
+                          <div>
+                            <p>
+                              <b>Profit:</b>
+                            </p>
+                            <p>
+                              <span id="profit"></span>% Weekly for lifelong
+                            </p>
+                          </div>
+
+                          <div>
+                            <p>
+                              <b>Credit Amount:</b>
+                            </p>
+                            <p>$<span id="creditAmount"></span></p>
+                          </div>
+                          <div>
+                            <p>
+                              <b>Deposit Fee:</b>
+                            </p>
+                            <p>0.00%</p>
+                          </div>
+                          <div>
+                            <p>
+                              <b>Debit Amount:</b>
+                            </p>
+                            <p>$<span id="debitAmount"></span></p>
+                          </div>
+
+                          <div>
+                            <p>
+                              <b>Order status:</b>
+                            </p>
+                            <p>Waiting for payment</p>
+                          </div>
+                          <p
+                            style="
+                              font-size: 15px;
+                              font-weight: 500;
+                              color: #6c757d;
+                            "
+                          >
+                            Please send $<span id="coinPrice"></span> worth of
+                            <span id="coinType"></span> to
+                            <b
+                              onclick="copyAddress()"
+                              style="cursor: pointer"
+                              id="wallet"
+                            ></b>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <!-- end col -->
+                        <div class="col-sm-12">
+                          <div class="text-sm-end mt-sm-0">
+                            <button
+                              onclick="submitRequest()"
+                              id="submit-btn-text"
+                              type="button"
+                              class="btn btn-success"
+                            >
+                              I have made the payment
+                            </button>
+                          </div>
+                        </div>
+                        <!-- end col -->
+                      </div>
+                    </div>
+                    <!-- end col-->
+                  </div>
+                  <!-- end row-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content -->
+
+        <!-- Footer Start -->
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <div>
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  © Exclusive Investment Limited
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div
+                  class="d-none d-md-flex gap-4 align-item-center justify-content-md-end footer-links"
+                >
+                  <a href="/about/">About</a>
+                  <a href="/rules/">Rules</a>
+                  <a href="/contact/">Contact Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="google_translate_element"
+            style="position: fixed; bottom: 20px; left: 20px; z-index: 400"
+          ></div>
+        </footer>
+        <!-- end Footer -->
+      </div>
+    </div>
+
+    <script>
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const amount = urlParams.get("amount") || "";
+      const planId = urlParams.get("plan") || "";
+      const paymentMethod = urlParams.get("method") || "";
+      const token = localStorage.getItem("token");
+      let address = "";
+      let planData = {
+        plan: "",
+        profit: "",
+      };
+
+      switch (planId) {
+        case "1":
+          planData.plan = "Basic Plan";
+          planData.profit = "10";
+          break;
+
+        case "2":
+          planData.plan = "Standard Plan";
+          planData.profit = "20";
+          break;
+
+        case "3":
+          planData.plan = "Premium Plan";
+          planData.profit = "30";
+          break;
+
+        case "4":
+          planData.plan = "Vip Plan";
+          planData.profit = "40";
+          break;
+
+        default:
+          planData.plan = "Basic Plan";
+          planData.profit = "10";
+          break;
+      }
+
+      document.addEventListener("DOMContentLoaded", async function () {
+        if (!token) {
+          window.location.href = "/login";
+        } else {
+          var requestOptions = {
+            method: "GET",
+            redirect: "follow",
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          };
+
+          try {
+            let request = await fetch(
+              "https://exquisute-backend.onrender.com/api/v1/user",
+              requestOptions
+            );
+            let getWalletRequest = await fetch(
+              "https://exquisute-backend.onrender.com/api/v1/admin/address"
+            );
+
+            let response = await request.json();
+            let getWalletResponse = await getWalletRequest.json();
+
+            if (getWalletRequest.ok) {
+              let adminAddress = paymentMethod.startsWith("Bitcoin")
+                ? getWalletResponse.data?.bitcoinAddress
+                : getWalletResponse.data?.usdtAddress;
+              address = adminAddress;
+              document.getElementById("wallet").textContent = adminAddress;
+            }
+
+            if (request.ok) {
+              document.getElementById("fullName").textContent =
+                response?.data?.fullName;
+            } else {
+              Toastify({
+                text: response?.description || "Failed to fetch user details",
+                duration: 3000,
+                gravity: "top",
+                position: "center",
+                backgroundColor: "#dc3545",
+              }).showToast();
+
+              if (response?.description === "Not authenticated") {
+                localStorage.removeItem("token");
+                window.location.href = "/login";
+              }
+            }
+          } catch (error) {
+            Toastify({
+              text: error?.message || "Failed to fetch user details",
+              duration: 3000,
+              gravity: "top",
+              position: "center",
+              backgroundColor: "#dc3545",
+            }).showToast();
+          }
+        }
+      });
+
+      function handleLogout() {
+        localStorage.removeItem("token");
+        window.location.href = "/login";
+      }
+
+      async function copyAddress() {
+        try {
+          await navigator.clipboard.writeText(address);
+          Toastify({
+            text: "Wallet address Copied to your clipboard",
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+            backgroundColor: "#28a745",
+          }).showToast();
+        } catch (error) {
+          Toastify({
+            text: error?.message || "Failed to copy wallet address",
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+            backgroundColor: "#dc3545",
+          }).showToast();
+        }
+      }
+
+      document.getElementById("creditAmount").textContent = amount;
+      document.getElementById("debitAmount").textContent = amount;
+      document.getElementById("coinPrice").textContent = amount;
+      document.getElementById("profit").textContent = planData.profit;
+      document.getElementById("plan").textContent = planData.plan;
+      document.getElementById("coinType").textContent =
+        paymentMethod.startsWith("Bitcoin") ? "Bitcoin" : "USDT";
+      document.getElementById("method").textContent = paymentMethod;
+
+      async function submitRequest() {
+        const submitBtn = document.getElementById("submit-btn-text");
+        submitBtn.textContent = "Please wait...";
+
+        const formData = {
+          planId,
+          paymentMethod,
+          amount,
+        };
+        try {
+          const response = await fetch(
+            "https://exquisute-backend.onrender.com/api/v1/deposit",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
+              },
+              body: JSON.stringify(formData),
+            }
+          );
+          const result = await response.json();
+          if (response.ok) {
+            Toastify({
+              text: "Success! your deposit is being processed.",
+              duration: 3000,
+              gravity: "top",
+              position: "center",
+              backgroundColor: "#28a745",
+            }).showToast();
+            setTimeout(() => {
+              window.location.href = "/deposit-history";
+            }, 2000);
+          } else {
+            Toastify({
+              text: `Error: ${
+                result.description || "Failed to request deposit"
+              }`,
+              duration: 3000,
+              gravity: "top",
+              position: "center",
+              backgroundColor: "#dc3545",
+            }).showToast();
+            if (response?.description === "Not authenticated") {
+              localStorage.removeItem("token");
+              window.location.href = "/login";
+            }
+          }
+        } catch (error) {
+          Toastify({
+            text: error?.message || "Failed to request deposit",
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+            backgroundColor: "#dc3545",
+          }).showToast();
+        } finally {
+          submitBtn.textContent = "I have made the payment";
+        }
+      }
+    </script>
+
+    <script src="../../dashboard-assets/js/vendor.min.js"></script>
+
+    <!-- App js -->
+    <script src="../../dashboard-assets/js/app.min.js"></script>
+
+    <!-- Chat app -->
+    <script src="../../dashboard-assets/js/pages/jquery.chat.js"></script>
+
+    <!-- Todo app -->
+    <script src="../../dashboard-assets/js/pages/jquery.todo.js"></script>
+
+    <!-- Dashboard init JS -->
+    <script src="../../dashboard-assets/js/pages/dashboard-3.init.js"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
+</html>

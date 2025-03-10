@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" data-topbar-color="dark">
+  <head>
+    <meta charset="utf-8" />
+    <title>Admin Withdrawals - Exquisite Investment Limited</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta content="Exquisite Investment Limited" name="author" />
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="../../img/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- touch icon -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="..././img/apple-touch-icon.png"
+    />
+
+    <!-- Theme Config Js -->
+    <script src="../../dashboard-assets/js/head.js"></script>
+
+    <!-- Bootstrap css -->
+    <link
+      href="../../dashboard-assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+      id="app-style"
+    />
+
+    <!-- App css -->
+    <link
+      href="../../dashboard-assets/css/app.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link rel="stylesheet" href="../../css/switch.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="../css/new.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/39a80cd06c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Begin page -->
+    <div id="wrapper">
+      <!-- ========== Menu ========== -->
+      <div class="app-menu">
+        <!-- Brand Logo -->
+        <div class="logo-box"></div>
+
+        <!-- menu-left -->
+        <div class="scrollbar">
+          <!--- Menu -->
+          <ul class="menu">
+            <li class="menu-title">Main</li>
+
+            <li class="menu-item">
+              <a href="/admin/dashboard/" class="menu-link">
+                <span class="menu-icon"
+                  ><i style="font-size: 13px" class="fa-solid fa-tv"></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text">
+                  Dashboard
+                </span>
+              </a>
+            </li>
+
+            <li class="menu-title">Finances</li>
+
+            <li class="menu-item">
+              <a
+                href="#menuEcommerce"
+                data-bs-toggle="collapse"
+                class="menu-link"
+              >
+                <span class="menu-icon"
+                  ><i
+                    style="font-size: 13px; color: #fcb42d"
+                    class="fa-solid fa-dollar-sign"
+                  ></i
+                ></span>
+                <span style="font-size: 14px; color: #fcb42d" class="menu-text">
+                  Transactions
+                </span>
+                <span class="menu-arrow">
+                  <i
+                    style="font-size: 11px"
+                    class="fa-solid fa-angle-right"
+                  ></i>
+                </span>
+              </a>
+              <div class="collapse" id="menuEcommerce">
+                <ul class="sub-menu">
+                  <li class="menu-item">
+                    <a href="/admin/deposits/" class="menu-link">
+                      <span style="font-size: 14px" class="menu-text"
+                        >Deposits</span
+                      >
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/admin/withdrawals/" class="menu-link">
+                      <span
+                        style="font-size: 14px; color: #fcb42d"
+                        class="menu-text"
+                        >Withdrawals</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="menu-title">Settings</li>
+            <li class="menu-item">
+              <a href="/admin/wallet/" class="menu-link">
+                <span class="menu-icon"
+                  ><i style="font-size: 13px" class="fa-solid fa-gears"></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text"> Wallet </span>
+              </a>
+            </li>
+            <li class="menu-item" onclick="handleLogout()">
+              <a href="#" class="menu-link">
+                <span class="menu-icon menu-link-color"
+                  ><i
+                    style="font-size: 13px"
+                    class="fa-solid fa-right-from-bracket"
+                  ></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text menu-link-color">
+                  Logout
+                </span>
+              </a>
+            </li>
+          </ul>
+          <!--- End Menu -->
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- ========== Left menu End ========== -->
+
+      <!-- ============================================================== -->
+      <!-- Start Page Content here -->
+      <!-- ============================================================== -->
+
+      <div class="content-page">
+        <!-- ========== Topbar Start ========== -->
+        <div class="navbar-custom">
+          <div class="topbar">
+            <div class="topbar-menu d-flex align-items-center gap-1">
+              <!-- Sidebar Menu Toggle Button -->
+              <button class="button-toggle-menu">
+                <i style="font-size: 14px" class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+
+            <ul class="topbar-menu d-flex align-items-center">
+              <!-- Light/Dark Mode Toggle Button -->
+              <li class="d-inline-block d-sm-inline-block">
+                <div
+                  class="nav-link waves-effect waves-light"
+                  id="light-dark-mode"
+                >
+                  <i style="font-size: 20px" class="ri-moon-line"></i>
+                </div>
+              </li>
+
+              <!-- User Dropdown -->
+              <li class="dropdown inline-block">
+                <a
+                  class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="false"
+                  aria-expanded="false"
+                >
+                  <span class="ms-1 inline-block">
+                    <span id="fullName"></span> &nbsp;
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- ========== Topbar End ========== -->
+
+        <div class="content">
+          <!-- Start Content-->
+          <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+              <div class="col-12">
+                <div class="page-title-box">
+                  <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                      <li class="breadcrumb-item">
+                        <a style="color: #fcb42d" href="/dashboard/">Home </a>
+                      </li>
+
+                      <li class="breadcrumb-item active">
+                        <i
+                          style="font-size: 9px"
+                          class="fas fa-angle-right"
+                        ></i>
+                      </li>
+
+                      <li class="breadcrumb-item active">Withdrawals</li>
+                    </ol>
+                  </div>
+                  <h4 class="page-title">All Withdrawals</h4>
+                </div>
+              </div>
+            </div>
+            <!-- end page title -->
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="header-title">Total Withdrawals</h4>
+
+                    <div
+                      id="basic-datatable_wrapper"
+                      class="dataTables_wrapper dt-bootstrap5 no-footer"
+                    >
+                      <div
+                        style="
+                          overflow-x: auto;
+                          max-height: 80vh;
+                          overflow-y: auto;
+                        "
+                        class="row tableScrollbar"
+                      >
+                        <div class="col-sm-12" style="min-width: 950px">
+                          <table
+                            id="basic-datatable"
+                            class="table dt-responsive nowrap w-100 dataTable no-footer dtr-inline"
+                            aria-describedby="basic-datatable_info"
+                            style="width: 1010px"
+                          >
+                            <thead>
+                              <tr>
+                                <th tabindex="0" rowspan="1" colspan="1">
+                                  Name
+                                </th>
+                                <th tabindex="1" rowspan="1" colspan="1">
+                                  Reference
+                                </th>
+                                <th tabindex="2" rowspan="1" colspan="1">
+                                  Withdrawal method
+                                </th>
+                                <th tabindex="3" rowspan="1" colspan="1">
+                                  Wallet Address
+                                </th>
+                                <th tabindex="4" rowspan="1" colspan="1">
+                                  Amount
+                                </th>
+                                <th tabindex="5" rowspan="1" colspan="1">
+                                  Paid
+                                </th>
+                              </tr>
+                            </thead>
+
+                            <tbody></tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end card body-->
+                </div>
+                <!-- end card -->
+              </div>
+              <!-- end col-->
+            </div>
+          </div>
+          <!-- container -->
+        </div>
+        <!-- content -->
+      </div>
+      <div
+        id="google_translate_element"
+        style="position: fixed; bottom: 20px; left: 20px; z-index: 400"
+      ></div>
+    </div>
+
+    <script>
+      const token = localStorage.getItem("adminToken");
+      document.addEventListener("DOMContentLoaded", async function () {
+        if (!token) {
+          window.location.href = "/admin/login";
+        } else {
+          var requestOptions = {
+            method: "GET",
+            redirect: "follow",
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          };
+
+          try {
+            let request = await fetch(
+              "https://exquisute-backend.onrender.com/api/v1/admin/details",
+              requestOptions
+            );
+            let withdrawalsRequest = await fetch(
+              "https://exquisute-backend.onrender.com/api/v1/admin/user/withdrawals",
+              requestOptions
+            );
+            let response = await request.json();
+            let withdrawalsResponse = await withdrawalsRequest.json();
+
+            if (request.ok) {
+              document.getElementById("fullName").textContent =
+                response?.data?.firstName + " " + response?.data?.lastName;
+            } else {
+              Toastify({
+                text: response?.description || "Failed to fetch admin details",
+                duration: 3000,
+                gravity: "top",
+                position: "center",
+                backgroundColor: "#dc3545",
+              }).showToast();
+
+              if (
+                response?.description === "Not authenticated" ||
+                withdrawalsResponse?.description === "Not authenticated"
+              ) {
+                localStorage.removeItem("adminToken");
+                window.location.href = "/admin/login";
+              }
+            }
+            if (withdrawalsRequest.ok) {
+              console.log(withdrawalsResponse);
+              updateTable(withdrawalsResponse.data);
+            }
+          } catch (error) {
+            Toastify({
+              text: error?.message || "Failed to fetch admin details",
+              duration: 3000,
+              gravity: "top",
+              position: "center",
+              backgroundColor: "#dc3545",
+            }).showToast();
+          }
+
+          function updateTable(data) {
+            const tableBody = document.querySelector("#basic-datatable tbody");
+            tableBody.innerHTML = "";
+            data.forEach((item) => {
+              const row = document.createElement("tr");
+
+              row.innerHTML = `
+  <td>${item.withdrawerUserId?.fullName}</td>
+  <td>${item.reference}</td>
+  <td>${item.withdrawalMethod}</td>
+  <td>${item.address}</td>
+  <td>$${item.amount}</td>
+  <td>
+    <div class="switch-container">
+      <label class="switch">
+        <input 
+          type="checkbox"
+          ${item.withdrawalStatus !== "pending" ? "checked" : ""}
+           ${item.withdrawalStatus !== "pending" ? "disabled" : ""}
+           onchange="markWithdrawalAsSuccessful(event, '${item._id}')"
+        />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </td>
+`;
+
+              tableBody.appendChild(row);
+            });
+          }
+        }
+      });
+
+      async function markWithdrawalAsSuccessful(event, id) {
+        const isChecked = event.target.checked;
+        try {
+          const response = await fetch(
+            `https://exquisute-backend.onrender.com/api/v1/admin/user/withdrawal?withdrawalId=${id}`,
+            {
+              method: "PATCH",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
+          const result = await response.json();
+          if (response.ok) {
+            Toastify({
+              text: response?.description || "Withdrawal Marked as successful",
+              duration: 3000,
+              gravity: "top",
+              position: "center",
+              backgroundColor: "#28a745",
+            }).showToast();
+            setTimeout(() => {
+              window.location.reload();
+            }, 1000);
+          } else {
+            Toastify({
+              text: `Error: ${
+                result.description || "Failed to mark withdrawal as successful."
+              }`,
+              duration: 3000,
+              gravity: "top",
+              position: "center",
+              backgroundColor: "#dc3545",
+            }).showToast();
+            if (response?.description === "Not authenticated") {
+              localStorage.removeItem("token");
+              window.location.href = "/admin/login";
+            }
+          }
+        } catch (error) {
+          Toastify({
+            text: error?.message || "Failed to mark withdrawal as successful.",
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+            backgroundColor: "#dc3545",
+          }).showToast();
+        }
+      }
+
+      function handleLogout() {
+        localStorage.removeItem("token");
+        window.location.href = "/login";
+      }
+    </script>
+
+    <script src="../../dashboard-assets/js/vendor.min.js"></script>
+
+    <!-- App js -->
+    <script src="../../dashboard-assets/js/app.min.js"></script>
+
+    <!-- Chat app -->
+    <script src="../../dashboard-assets/js/pages/jquery.chat.js"></script>
+
+    <!-- Todo app -->
+    <script src="../../dashboard-assets/js/pages/jquery.todo.js"></script>
+
+    <!-- Dashboard init JS -->
+    <script src="../../dashboard-assets/js/pages/dashboard-3.init.js"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
+</html>

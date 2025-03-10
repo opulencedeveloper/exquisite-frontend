@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" data-topbar-color="dark">
+  <head>
+    <meta charset="utf-8" />
+    <title>Admin Wallet - Exquisite Investment Limited</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta content="Exquisite Investment Limited" name="author" />
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="../../img/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- touch icon -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="../../img/apple-touch-icon.png"
+    />
+
+    <!-- Theme Config Js -->
+    <script src="../../dashboard-assets/js/head.js"></script>
+
+    <!-- Bootstrap css -->
+    <link
+      href="../../dashboard-assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+      id="app-style"
+    />
+
+    <!-- App css -->
+    <link
+      href="../../dashboard-assets/css/app.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link rel="stylesheet" href="../css/new-styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/39a80cd06c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Begin page -->
+    <div id="wrapper">
+      <!-- ========== Menu ========== -->
+      <div class="app-menu">
+        <!-- Brand Logo -->
+        <div class="logo-box"></div>
+
+        <!-- menu-left -->
+        <div class="scrollbar">
+          <!--- Menu -->
+          <ul class="menu">
+            <li class="menu-title">Main</li>
+
+            <li class="menu-item">
+              <a href="/admin/dashboard/" class="menu-link">
+                <span class="menu-icon"
+                  ><i style="font-size: 13px" class="fa-solid fa-tv"></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text">
+                  Dashboard
+                </span>
+              </a>
+            </li>
+
+            <li class="menu-title">Finances</li>
+
+            <li class="menu-item">
+              <a
+                href="#menuEcommerce"
+                data-bs-toggle="collapse"
+                class="menu-link"
+              >
+                <span class="menu-icon"
+                  ><i
+                    style="font-size: 13px"
+                    class="fa-solid fa-dollar-sign"
+                  ></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text">
+                  Transactions
+                </span>
+                <span class="menu-arrow">
+                  <i
+                    style="font-size: 11px"
+                    class="fa-solid fa-angle-right"
+                  ></i>
+                </span>
+              </a>
+              <div class="collapse" id="menuEcommerce">
+                <ul class="sub-menu">
+                  <li class="menu-item">
+                    <a href="/admin/deposits/" class="menu-link">
+                      <span style="font-size: 14px" class="menu-text"
+                        >Deposits</span
+                      >
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/admin/withdrawals/" class="menu-link">
+                      <span style="font-size: 14px" class="menu-text"
+                        >Withdrawals</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="menu-title">Settings</li>
+            <li class="menu-item">
+              <a href="/admin/wallet/" class="menu-link">
+                <span class="menu-icon"
+                  ><i
+                    style="font-size: 13px; color: #fcb42d"
+                    class="fa-solid fa-gears"
+                  ></i
+                ></span>
+                <span style="font-size: 14px; color: #fcb42d" class="menu-text">
+                  Wallet
+                </span>
+              </a>
+            </li>
+            <li class="menu-item" onclick="handleLogout()">
+              <a href="#" class="menu-link">
+                <span class="menu-icon menu-link-color"
+                  ><i
+                    style="font-size: 13px"
+                    class="fa-solid fa-right-from-bracket"
+                  ></i
+                ></span>
+                <span style="font-size: 14px" class="menu-text menu-link-color">
+                  Logout
+                </span>
+              </a>
+            </li>
+          </ul>
+          <!--- End Menu -->
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- ========== Left menu End ========== -->
+
+      <!-- ============================================================== -->
+      <!-- Start Page Content here -->
+      <!-- ============================================================== -->
+
+      <div class="content-page">
+        <!-- ========== Topbar Start ========== -->
+        <div class="navbar-custom">
+          <div class="topbar">
+            <div class="topbar-menu d-flex align-items-center gap-1">
+              <!-- Sidebar Menu Toggle Button -->
+              <button class="button-toggle-menu">
+                <i style="font-size: 14px" class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+
+            <ul class="topbar-menu d-flex align-items-center">
+              <!-- Light/Dark Mode Toggle Button -->
+              <li class="d-inline-block d-sm-inline-block">
+                <div
+                  class="nav-link waves-effect waves-light"
+                  id="light-dark-mode"
+                >
+                  <i style="font-size: 20px" class="ri-moon-line"></i>
+                </div>
+              </li>
+
+              <!-- User Dropdown -->
+              <li class="dropdown inline-block">
+                <a
+                  class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="false"
+                  aria-expanded="false"
+                >
+                  <span class="ms-1 inline-block">
+                    <span id="fullName"></span> &nbsp;
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- ========== Topbar End ========== -->
+
+        <div class="content">
+          <!-- Start Content-->
+          <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+              <div class="col-12">
+                <div class="page-title-box">
+                  <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                      <li class="breadcrumb-item">
+                        <a style="color: #fcb42d" href="/dashboard/">Home </a>
+                      </li>
+
+                      <li class="breadcrumb-item active">
+                        <i
+                          style="font-size: 9px"
+                          class="fas fa-angle-right"
+                        ></i>
+                      </li>
+
+                      <li class="breadcrumb-item active">Wallet</li>
+                    </ol>
+                  </div>
+                  <h4 class="page-title">Wallet Address</h4>
+                </div>
+              </div>
+            </div>
+            <!-- end page title -->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <!-- end col-->
+                      <div class="col-lg-12">
+                        <div class="tab-content">
+                          <div
+                            class="tab-pane fade active show"
+                            id="custom-v-pills-billing"
+                            role="tabpanel"
+                            aria-labelledby="custom-v-pills-billing-tab"
+                          >
+                            <div>
+                              <h4 class="header-title">Wallet Address</h4>
+
+                              <p class="sub-header">
+                                Edit your bitcoin and usdt wallet address.
+                              </p>
+                              <form id="edit-wallet-form">
+                                <div class="row">
+                                  <div class="col-12">
+                                    <div class="mb-3">
+                                      <label for="amount" class="form-label"
+                                        >Bitcoin</label
+                                      >
+                                      <input
+                                        class="form-control"
+                                        type="text"
+                                        placeholder="Enter Address"
+                                        id="bitcoin"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-12">
+                                    <div class="mb-3">
+                                      <label for="amount" class="form-label"
+                                        >USDT</label
+                                      >
+                                      <input
+                                        class="form-control"
+                                        type="text"
+                                        placeholder="Enter Address"
+                                        id="usdt"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="row">
+                                  <!-- end col -->
+                                  <div class="col-sm-12">
+                                    <div class="text-end">
+                                      <button
+                                        type="submit"
+                                        class="btn btn-success"
+                                        style="
+                                          background-color: #fcb42d;
+                                          border: 1px solid #fcb42d;
+                                          border-radius: 25px;
+                                        "
+                                      >
+                                        <i class="fas fa-gear me-1"></i>
+                                        <span id="submit-btn-text"
+                                          >Update wallet</span
+                                        >
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <!-- end col -->
+                                </div>
+                                <!-- end row -->
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end col-->
+                    </div>
+                    <!-- end row-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- container -->
+        </div>
+        <!-- content -->
+      </div>
+      <div
+        id="google_translate_element"
+        style="position: fixed; bottom: 20px; left: 20px; z-index: 400"
+      ></div>
+    </div>
+
+    <script>
+      const token = localStorage.getItem("adminToken");
+
+      document.addEventListener("DOMContentLoaded", async function () {
+        if (!token) {
+          window.location.href = "/admin/login";
+        } else {
+          var requestOptions = {
+            method: "GET",
+            redirect: "follow",
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          };
+
+          try {
+            let request = await fetch(
+              "https://exquisute-backend.onrender.com/api/v1/admin/details",
+              requestOptions
+            );
+            let walletRequest = await fetch(
+              "https://exquisute-backend.onrender.com/api/v1/admin/address",
+              requestOptions
+            );
+            let response = await request.json();
+            let walletResponse = await walletRequest.json();
+
+            if (request.ok) {
+              document.getElementById("fullName").textContent =
+                response?.data?.firstName + " " + response?.data?.lastName;
+            } else {
+              Toastify({
+                text: response?.description || "Failed to fetch data",
+                duration: 3000,
+                gravity: "top",
+                position: "center",
+                backgroundColor: "#dc3545",
+              }).showToast();
+
+              if (
+                response?.description === "Not authenticated" ||
+                walletResponse?.description === "Not authenticated"
+              ) {
+                localStorage.removeItem("adminToken");
+                window.location.href = "/admin/login";
+              }
+            }
+            if (walletRequest.ok) {
+              const data = walletResponse.data;
+              console.log(data);
+              document.getElementById("bitcoin").value = data?.bitcoinAddress;
+              document.getElementById("usdt").value = data?.usdtAddress;
+            }
+          } catch (error) {
+            Toastify({
+              text: error?.message || "Failed to fetch data",
+              duration: 3000,
+              gravity: "top",
+              position: "center",
+              backgroundColor: "#dc3545",
+            }).showToast();
+          }
+        }
+      });
+
+      document
+        .getElementById("edit-wallet-form")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          let bitcoinAddress = document.getElementById("bitcoin").value;
+          let usdtAddress = document.getElementById("usdt").value;
+
+          const submitBtn = document.getElementById("submit-btn-text");
+          submitBtn.textContent = "Please wait...";
+          const formData = {
+            bitcoinAddress,
+            usdtAddress,
+          };
+
+          try {
+            const response = await fetch(
+              "https://exquisute-backend.onrender.com/api/v1/admin/address",
+              {
+                method: "PATCH",
+                headers: {
+                  "Content-Type": "application/json",
+                  Authorization: `Bearer ${token}`,
+                },
+                body: JSON.stringify(formData),
+              }
+            );
+            const result = await response.json();
+            if (response.ok) {
+              Toastify({
+                text: "Wallet updated.",
+                duration: 3000,
+                gravity: "top",
+                position: "center",
+                backgroundColor: "#28a745",
+              }).showToast();
+              setTimeout(() => {
+                window.location.reload();
+              }, 1000);
+            } else {
+              Toastify({
+                text: `Error: ${
+                  result.description || "Failed to update wallet."
+                }`,
+                duration: 3000,
+                gravity: "top",
+                position: "center",
+                backgroundColor: "#dc3545",
+              }).showToast();
+            }
+          } catch (error) {
+            Toastify({
+              text: error?.message || "Failed to update wallet.",
+              duration: 3000,
+              gravity: "top",
+              position: "center",
+              backgroundColor: "#dc3545",
+            }).showToast();
+          } finally {
+            submitBtn.textContent = "Update wallet";
+          }
+        });
+
+      function handleLogout() {
+        localStorage.removeItem("token");
+        window.location.href = "/admin/login";
+      }
+    </script>
+
+    <script src="../../dashboard-assets/js/vendor.min.js"></script>
+
+    <!-- App js -->
+    <script src="../../dashboard-assets/js/app.min.js"></script>
+
+    <!-- Chat app -->
+    <script src="../../dashboard-assets/js/pages/jquery.chat.js"></script>
+
+    <!-- Todo app -->
+    <script src="../../dashboard-assets/js/pages/jquery.todo.js"></script>
+
+    <!-- Dashboard init JS -->
+    <script src="../../dashboard-assets/js/pages/dashboard-3.init.js"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
+</html>
