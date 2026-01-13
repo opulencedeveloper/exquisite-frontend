@@ -171,7 +171,22 @@
             <div class="topbar-menu d-flex align-items-center gap-1">
               <!-- Sidebar Menu Toggle Button -->
               <button class="button-toggle-menu">
-                <i style="font-size: 14px" class="fa-solid fa-bars"></i>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-menu"
+                >
+                  <line x1="4" x2="20" y1="12" y2="12" />
+                  <line x1="4" x2="20" y1="6" y2="6" />
+                  <line x1="4" x2="20" y1="18" y2="18" />
+                </svg>
               </button>
             </div>
 
@@ -369,23 +384,23 @@
           function updateTable(data) {
             const tableBody = document.querySelector("#basic-datatable tbody");
             tableBody.innerHTML = "";
-            data.forEach((item) => {
+            data?.reverse()?.forEach((item) => {
               const row = document.createElement("tr");
 
               row.innerHTML = `
-  <td>${item.depositedUserId.fullName}</td>
-  <td>${item.depositedUserId.email}</td>
-  <td>${item.paymentMethod}</td>
-  <td>${item.reference}</td>
-  <td>${item.amount}</td>
+  <td>${item?.depositedUserId?.fullName}</td>
+  <td>${item?.depositedUserId?.email}</td>
+  <td>${item?.paymentMethod}</td>
+  <td>${item?.reference}</td>
+  <td>${item?.amount}</td>
   <td>
     <div class="switch-container">
       <label class="switch">
         <input 
           type="checkbox"
-          ${item.depositStatus !== "pending" ? "checked" : ""}
-           ${item.depositStatus !== "pending" ? "disabled" : ""}
-           onchange="markDepositAsSuccessful(event, '${item._id}')"
+          ${item?.depositStatus !== "pending" ? "checked" : ""}
+           ${item?.depositStatus !== "pending" ? "disabled" : ""}
+           onchange="markDepositAsSuccessful(event, '${item?._id}')"
         />
         <span class="slider"></span>
       </label>

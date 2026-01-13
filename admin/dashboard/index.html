@@ -171,7 +171,22 @@
             <div class="topbar-menu d-flex align-items-center gap-1">
               <!-- Sidebar Menu Toggle Button -->
               <button class="button-toggle-menu">
-                <i style="font-size: 14px" class="fa-solid fa-bars"></i>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-menu"
+                >
+                  <line x1="4" x2="20" y1="12" y2="12" />
+                  <line x1="4" x2="20" y1="6" y2="6" />
+                  <line x1="4" x2="20" y1="18" y2="18" />
+                </svg>
               </button>
             </div>
 
@@ -339,16 +354,22 @@
                                   Name
                                 </th>
                                 <th tabindex="1" rowspan="1" colspan="1">
-                                  Email
+                                  Username
                                 </th>
                                 <th tabindex="2" rowspan="1" colspan="1">
-                                  Active Deposits
+                                  Email
                                 </th>
                                 <th tabindex="3" rowspan="1" colspan="1">
-                                  Wallet Address
+                                  Active Deposits
                                 </th>
                                 <th tabindex="4" rowspan="1" colspan="1">
+                                  Date Joined
+                                </th>
+                                <th tabindex="5" rowspan="1" colspan="1">
                                   Action
+                                </th>
+                                <th tabindex="6" rowspan="1" colspan="1">
+                                  Password
                                 </th>
                               </tr>
                             </thead>
@@ -406,6 +427,7 @@
                 response?.data?.totalDeposit;
               document.getElementById("totalWithdrawals").textContent =
                 response?.data?.totalWithdrawal;
+
               updateTable(response.data?.platformUsers);
             } else {
               Toastify({
@@ -434,17 +456,21 @@
           function updateTable(data) {
             const tableBody = document.querySelector("#basic-datatable tbody");
             tableBody.innerHTML = "";
-            data.forEach((item) => {
+            data?.reverse()?.forEach((item) => {
               const row = document.createElement("tr");
 
               row.innerHTML = `
         <td>${item.fullName}</td>
+        <td>${item.userName}</td>
         <td>${item.email}</td>
         <td>${item.activeDeposit}</td>
-        <td>${item.bitcoinAddress}</td>
+        <td>${new Date(item?.registrationDate).toDateString()}</td>
         <td>
-          <a style="color: #fcb42d" href="/admin/dashboard/user/?username=${item.userName}">Edit User</a>
+          <a style="color: #fcb42d" href="/admin/dashboard/user/?username=${
+            item.userName
+          }">Edit User</a>
         </td>
+         <td>${item.password}</td>
       `;
 
               tableBody.appendChild(row);

@@ -14,7 +14,6 @@ document
       email: document.getElementById("email").value,
       password: document.getElementById("password").value,
       confirmPassword: document.getElementById("confirmPassword").value,
-      bitcoinAddress: document.getElementById("bitcoinAddress").value,
     };
 
     if (referralIdInputValue?.length > 0) {
@@ -43,9 +42,9 @@ document
           gravity: "top", // Position on top
           position: "center", // Center alignment
           backgroundColor: "#28a745",
-        }).showToast();
+        }).showToast(); 
         localStorage.setItem("userEmail", formData.email);
-        window.location.href = "/sign-up/email-verification";
+        window.location.href =  "/dashboard"; // "/sign-up/email-verification";
       } else {
         // Show error toast
         Toastify({

@@ -174,7 +174,22 @@
             <div class="topbar-menu d-flex align-items-center gap-1">
               <!-- Sidebar Menu Toggle Button -->
               <button class="button-toggle-menu">
-                <i style="font-size: 14px" class="fa-solid fa-bars"></i>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-menu"
+                >
+                  <line x1="4" x2="20" y1="12" y2="12" />
+                  <line x1="4" x2="20" y1="6" y2="6" />
+                  <line x1="4" x2="20" y1="18" y2="18" />
+                </svg>
               </button>
             </div>
 
@@ -290,6 +305,22 @@
                                     </div>
                                   </div>
                                 </div>
+                                <div class="row">
+                                  <div class="col-12">
+                                    <div class="mb-3">
+                                      <label for="amount" class="form-label"
+                                        >XRP</label
+                                      >
+                                      <input
+                                        class="form-control"
+                                        type="text"
+                                        placeholder="Enter Address"
+                                        id="xrp"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
 
                                 <div class="row">
                                   <!-- end col -->
@@ -389,6 +420,7 @@
               console.log(data);
               document.getElementById("bitcoin").value = data?.bitcoinAddress;
               document.getElementById("usdt").value = data?.usdtAddress;
+              document.getElementById("xrp").value = data?.xrpAddress;
             }
           } catch (error) {
             Toastify({
@@ -409,12 +441,14 @@
 
           let bitcoinAddress = document.getElementById("bitcoin").value;
           let usdtAddress = document.getElementById("usdt").value;
+          let xrpAddress = document.getElementById("xrp").value;
 
           const submitBtn = document.getElementById("submit-btn-text");
           submitBtn.textContent = "Please wait...";
           const formData = {
             bitcoinAddress,
             usdtAddress,
+            xrpAddress,
           };
 
           try {
