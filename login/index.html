@@ -1,221 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap"
-      rel="stylesheet"
-    />
 
-    <link rel="stylesheet" href="../login-assets/fonts/icomoon/style.css" />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <link rel="stylesheet" href="../login-assets/css/owl.carousel.min.css" />
+  <!-- Premium Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../login-assets/css/bootstrap.min.css" />
+  <!-- Base Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/new-styles.css" />
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
-    <!-- touch icon -->
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="../img/apple-touch-icon.png"
-    />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon-precomposed" href="../img/apple-touch-icon.png" />
 
-    <!-- Style -->
-    <link rel="stylesheet" href="../login-assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
-    />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/toastify-js"
-    ></script>
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="https://kit.fontawesome.com/39a80cd06c.js" crossorigin="anonymous"></script>
 
-    <title>Login - Exquisite Investment Limited</title>
-  </head>
-<!-- Smartsupp Live Chat script -->
-<script type="text/javascript">
-var _smartsupp = _smartsupp || {};
-_smartsupp.key = '68b6e5f0cec7970aa1730c7bd7f839e73a7cee64';
-window.smartsupp||(function(d) {
-  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-  c.type='text/javascript';c.charset='utf-8';c.async=true;
-  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-})(document);
-</script>
-<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+  <title>Institutional Login - Exquisite Investment Limited</title>
 
+  <style>
+    body.premium-theme {
+      background: radial-gradient(circle at top right, #0a0e14 0%, #05070a 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      overflow-x: hidden;
+    }
 
+    .auth-container {
+      width: 100%;
+      max-width: 520px;
+      z-index: 10;
+    }
 
-  <body>
-    <div class="half">
-      <div
-        class="bg order-1 order-md-2"
-        style="background-image: url('../login-assets/images/bg.jpg')"
-      ></div>
-      <div class="contents order-2 order-md-1">
-        <div class="container">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-md-6">
-              <div class="form-block">
-                <div class="text-center mb-5">
-                  <h3>Login to Exquisite Investment</h3>
-                  <!-- <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p> -->
-                </div>
-                <form id="form-login">
-                  <div class="form-group first">
-                    <label for="username">Username</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Your username"
-                      id="username"
-                      required
-                    />
-                  </div>
-                  <div class="form-group last mb-3">
-                    <label for="password">Password</label>
-                    <input
-                      type="password"
-                      class="form-control"
-                      placeholder="Your Password"
-                      id="password"
-                      minlength="8"
-                      required
-                    />
-                  </div>
+    .login-card {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(25px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 40px;
+      padding: 60px 45px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    }
 
-                  <div class="d-sm-flex mb-4 align-items-center">
-                    <label class="control control--checkbox mb-3 mb-sm-0"
-                      ><span class="caption">Remember me</span>
-                      <input type="checkbox" checked="checked" />
-                      <div class="control__indicator"></div>
-                    </label>
-                    <span class="ml-auto"
-                      ><a href="/forgot-password" class="forgot-pass"
-                        >Forgot Password</a
-                      ></span
-                    >
-                  </div>
-                  <div class="d-sm-flex mb-4 align-items-center">
-                    <span class="caption">Don't have an account?</span>
+    .input-group-label {
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin-bottom: 12px;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
 
-                    <span class="ml-1"
-                      ><a href="/sign-up" class="forgot-pass"
-                        >Sign up now</a
-                      ></span
-                    >
-                  </div>
+    .auth-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 45px;
+      text-decoration: none;
+    }
 
-                  <button
-                    type="submit"
-                    class="btn btn-block btn-primary"
-                    id="submit-btn"
-                  >
-                    Log In
-                  </button>
-                </form>
-              </div>
-            </div>
+    .auth-logo img {
+      filter: drop-shadow(0 0 10px var(--accent-cyan));
+    }
+
+    .auth-logo span {
+      text-transform: uppercase;
+      color: white;
+      font-size: 22px;
+      letter-spacing: 4px;
+      font-weight: 800;
+      margin-left: 15px;
+    }
+
+    /* Custom Checkbox Styling */
+    .premium-checkbox-container {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .premium-checkbox-container input {
+      display: none;
+    }
+
+    .checkmark {
+      height: 20px;
+      width: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+      margin-right: 12px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .premium-checkbox-container:hover .checkmark {
+      border-color: var(--accent-cyan);
+    }
+
+    .premium-checkbox-container input:checked+.checkmark {
+      background: var(--accent-cyan);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+    }
+
+    .premium-checkbox-container input:checked+.checkmark:after {
+      content: "\f00c";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      position: absolute;
+      color: #000;
+      font-size: 12px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .forgot-pass {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .forgot-pass:hover {
+      color: var(--accent-violet);
+      text-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+    }
+  </style>
+</head>
+
+<body class="premium-theme">
+  <!-- Background Accents -->
+  <div
+    style="position: fixed; top: -10%; right: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(0, 242, 255, 0.04) 0%, transparent 70%); z-index: 1;">
+  </div>
+  <div
+    style="position: fixed; bottom: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(111, 0, 255, 0.04) 0%, transparent 70%); z-index: 1;">
+  </div>
+
+  <div class="auth-container">
+    <!-- Logo -->
+    <a href="/" class="auth-logo animate-fade-up">
+      <img src="../img/user/logo.png" alt="logo" width="50" height="50" />
+      <span>Exquisite</span>
+    </a>
+
+    <!-- Login Card -->
+    <div class="login-card animate-fade-up" style="animation-delay: 0.1s;">
+      <div class="uk-text-center uk-margin-large-bottom">
+        <h2 class="hero-title" style="font-size: 2.2rem; margin-bottom: 15px;">Secure <span
+            class="hero-highlight">Login</span></h2>
+        <p style="color: var(--text-secondary); line-height: 1.6;">Access your institutional trading terminal and
+          investment portfolio management suite.</p>
+      </div>
+
+      <form id="form-login">
+        <div class="uk-margin-medium-bottom">
+          <label class="input-group-label" for="username">Username / Agent ID</label>
+          <div class="uk-inline uk-width-1-1">
+            <span class="uk-form-icon" style="color: var(--accent-cyan);"><i
+                class="fas fa-user-shield fa-sm"></i></span>
+            <input class="uk-input premium-input" type="text" id="username" placeholder="Enter your ID" required />
           </div>
         </div>
-      </div>
-      <div
-        id="google_translate_element"
-        style="position: fixed; bottom: 20px; left: 20px; z-index: 400"
-      ></div>
+
+        <div class="uk-margin-medium-bottom">
+          <label class="input-group-label" for="password">Authentication Key</label>
+          <div class="uk-inline uk-width-1-1">
+            <span class="uk-form-icon" style="color: var(--accent-violet);"><i class="fas fa-lock fa-sm"></i></span>
+            <input class="uk-input premium-input" type="password" id="password" placeholder="Enter Password"
+              minlength="8" required />
+          </div>
+        </div>
+
+        <div class="uk-margin-medium-top uk-flex uk-flex-middle uk-flex-between">
+          <label class="premium-checkbox-container">
+            <input type="checkbox" checked="checked" />
+            <span class="checkmark"></span>
+            <span class="caption">Stay Authorized</span>
+          </label>
+          <a href="/forgot-password" class="forgot-pass">Lost Access?</a>
+        </div>
+
+        <div class="uk-margin-large-top">
+          <button id="submit-btn" type="submit" class="uk-width-1-1 btn-premium"
+            style="padding: 18px; border-radius: 15px; font-weight: 800; font-size: 1.1rem; letter-spacing: 1px;">
+            Authorize Terminal
+          </button>
+        </div>
+
+        <div class="uk-margin-medium-top uk-text-center">
+          <span style="color: var(--text-secondary); font-size: 0.95rem;">New to Exquisite?</span>
+          <a href="/sign-up"
+            style="color: var(--accent-cyan); font-weight: 600; margin-left: 8px; text-decoration: none;">Establish
+            Protocol</a>
+        </div>
+      </form>
     </div>
-    <script>
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      const otp = urlParams.get("token");
-      const email = urlParams.get("email");
-      document
-        .getElementById("form-login")
-        .addEventListener("submit", async (event) => {
-          event.preventDefault();
 
-          const submitBtn = document.getElementById("submit-btn");
-          submitBtn.textContent = "Please wait..."; // Change button text
+    <div class="uk-margin-large-top animate-fade-up" style="animation-delay: 0.2s;">
+      <p class="uk-text-center" style="color: rgba(255,255,255,0.25); font-size: 0.8rem; line-height: 1.6;">
+        Institutional Security Protocol Active. All access attempts are monitored and recorded.<br>
+        © 2024 Exquisite Investment Limited. Secure Access Module.
+      </p>
+    </div>
+  </div>
 
-          const formData = {
-            userName: document.getElementById("username").value,
-            password: document.getElementById("password").value,
-          };
+  <div id="google_translate_element" style="position: fixed; bottom: 20px; left: 20px; z-index: 400"></div>
 
-          try {
-            const response = await fetch(
-              "https://exquisute-backend.onrender.com/api/v1/signin",
-              {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
-              }
-            );
+  <!-- Smartsupp Live Chat -->
+  <script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = '2f6384a34fde3586bc7c4efbb118dd5b0600d103';
+    window.smartsupp || (function (d) {
+      var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
+      s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+      c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+      c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+    })(document);
+  </script>
 
-            const result = await response.json();
-            console.log(result);
+  <!-- Login Logic -->
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const otp = urlParams.get("token");
+    const email = urlParams.get("email");
 
-            if (response.ok) {
-              // Show success toast
-              Toastify({
-                text: "Logged in successfully",
-                duration: 3000,
-                gravity: "top", // Position on top
-                position: "center", // Center alignment
-                backgroundColor: "#28a745",
-              }).showToast();
-              localStorage.setItem("token", result?.data?.token);
-              window.location.href = "/dashboard";
-            } else {
-              // Show error toast
-              Toastify({
-                text: `Error: ${result.description || "Failed to login"}`,
-                duration: 3000,
-                gravity: "top",
-                position: "center",
-                backgroundColor: "#dc3545",
-              }).showToast();
-            }
-          } catch (error) {
-            Toastify({
-              text: error?.message || "Failed to login",
-              duration: 3000,
-              gravity: "top",
-              position: "center",
-              backgroundColor: "#dc3545",
-            }).showToast();
-          } finally {
-            submitBtn.textContent = "Log In"; // Reset button text
+    document.getElementById("form-login").addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const submitBtn = document.getElementById("submit-btn");
+      const originalText = submitBtn.textContent;
+      submitBtn.innerHTML = '<i class="fas fa-circle-notch fa-spin uk-margin-small-right"></i> Authorizing...';
+      submitBtn.style.opacity = '0.7';
+      submitBtn.style.pointerEvents = 'none';
+
+      const formData = {
+        userName: document.getElementById("username").value,
+        password: document.getElementById("password").value,
+      };
+
+      try {
+        const response = await fetch(
+          "https://exquisute-backend.onrender.com/api/v1/signin",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
           }
-        });
-    </script>
-    <script src="../login-assets/js/jquery-3.3.1.min.js"></script>
-    <script src="../login-assets/js/popper.min.js"></script>
-    <script src="../login-assets/js/bootstrap.min.js"></script>
-    <script src="../login-assets/js/main.js"></script>
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          { pageLanguage: "en" },
-          "google_translate_element"
         );
+
+        const result = await response.json();
+
+        if (response.ok) {
+          Toastify({
+            text: "Access Granted: Terminal loading...",
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+            backgroundColor: "linear-gradient(to right, #00f2ff, #00d4ff)",
+          }).showToast();
+          localStorage.setItem("token", result?.data?.token);
+          setTimeout(() => {
+            window.location.href = "/dashboard";
+          }, 1500);
+        } else {
+          Toastify({
+            text: `Protocol Error: ${result.description || "Authentication failed"}`,
+            duration: 5000,
+            gravity: "top",
+            position: "center",
+            backgroundColor: "#dc3545",
+          }).showToast();
+        }
+      } catch (error) {
+        Toastify({
+          text: "System Error: Connection to secure gateway failed.",
+          duration: 5000,
+          gravity: "top",
+          position: "center",
+          backgroundColor: "#dc3545",
+        }).showToast();
+      } finally {
+        if (!response?.ok) {
+          submitBtn.textContent = originalText;
+          submitBtn.style.opacity = '1';
+          submitBtn.style.pointerEvents = 'auto';
+        }
       }
-    </script>
-    <script
-      type="text/javascript"
-      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script>
-  </body>
+    });
+
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({ pageLanguage: "en" }, "google_translate_element");
+    }
+  </script>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Vendors -->
+  <script src="../login-assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../login-assets/js/popper.min.js"></script>
+  <script src="../login-assets/js/bootstrap.min.js"></script>
+</body>
+
 </html>

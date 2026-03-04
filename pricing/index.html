@@ -1,511 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="author" content="Exquisite Investment" />
-    <meta name="theme-color" content="#FCB42D" />
-    <!-- preload assets -->
-    <link
-      rel="preload"
-      href="../fonts/fa-brands-400.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="../fonts/fa-solid-900.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="../fonts/archivo-v18-latin-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="../fonts/archivo-v18-latin-300.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="../fonts/archivo-v18-latin-700.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link rel="preload" href="../css/style.css" as="style" />
-    <link rel="preload" href="../js/vendors/uikit.min.js" as="script" />
-    <link rel="preload" href="../js/utilities.min.js" as="script" />
-    <link rel="preload" href="../js/config-theme.js" as="script" />
-    <!-- stylesheet -->
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/new-styles.css" />
-    <!-- uikit -->
-    <script src="../js/vendors/uikit.min.js"></script>
-    <!-- favicon -->
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
-    <!-- touch icon -->
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="../img/apple-touch-icon.png"
-    />
-    <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/39a80cd06c.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Investment Plan - Exquisite Investment Limited</title>
-  </head>
+<head>
+  <!-- meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="author" content="Exquisite Investment" />
+  <meta name="theme-color" content="#FCB42D" />
+  <!-- preload assets -->
+  <link rel="preload" href="../fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/archivo-v18-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/archivo-v18-latin-300.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/archivo-v18-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../css/style.css" as="style" />
+  <link rel="preload" href="../js/vendors/uikit.min.js" as="script" />
+  <link rel="preload" href="../js/utilities.min.js" as="script" />
+  <link rel="preload" href="../js/config-theme.js" as="script" />
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/new-styles.css" />
+  <!-- uikit -->
+  <script src="../js/vendors/uikit.min.js"></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+  <!-- touch icon -->
+  <link rel="apple-touch-icon-precomposed" href="../img/apple-touch-icon.png" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/39a80cd06c.js" crossorigin="anonymous"></script>
+  <title>Investment Plan - Exquisite Investment Limited</title>
+</head>
 <!-- Smartsupp Live Chat script -->
 <script type="text/javascript">
-var _smartsupp = _smartsupp || {};
-_smartsupp.key = '68b6e5f0cec7970aa1730c7bd7f839e73a7cee64';
-window.smartsupp||(function(d) {
-  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-  c.type='text/javascript';c.charset='utf-8';c.async=true;
-  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-})(document);
+  var _smartsupp = _smartsupp || {};
+  _smartsupp.key = '2f6384a34fde3586bc7c4efbb118dd5b0600d103';
+  window.smartsupp || (function (d) {
+    var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
+    s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+    c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+    c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+  })(document);
 </script>
-<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+<noscript>Powered by <a href="https://www.smartsupp.com" target="_blank">Smartsupp</a></noscript>
 
 
 
-  <body>
-    <!-- page loader begin -->
-    <!-- <div class="page-loader">
+
+
+<body class="premium-theme">
+  <!-- page loader begin -->
+  <!-- <div class="page-loader">
       <div></div>
       <div></div>
       <div></div>
     </div> -->
-    <!-- page loader end -->
-    <!-- header begin -->
-    <header>
-      <div class="uk-section uk-padding-remove-vertical">
-        <nav
-          class="uk-navbar-container"
-          data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;"
-        >
-          <div class="uk-container" data-uk-navbar>
-            <div class="uk-navbar-left">
-              <a
-                class="uk-navbar-item uk-logo"
-                style="
+  <!-- page loader end -->
+  <!-- header begin -->
+  <header class="glass-nav">
+    <div class="uk-section uk-padding-remove-vertical">
+      <nav class="uk-navbar-container uk-navbar-transparent"
+        data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
+        <div class="uk-container" data-uk-navbar>
+          <div class="uk-navbar-left">
+            <a class="uk-navbar-item uk-logo" style="
                   width: max-content;
                   height: max-content;
                   display: flex;
                   align-items: center;
-                "
-                href="/"
-              >
-                <img
-                  src="../img/user/logo.png"
-                  alt="logo"
-                  width="45"
-                  height="45"
-                />
-                <span
-                  style="
+                " href="/">
+              <img src="../img/user/logo.png" alt="logo" width="40" height="40"
+                style="filter: drop-shadow(0 0 5px var(--accent-cyan));" />
+              <span style="
                     text-transform: uppercase;
                     color: white;
-                    font-size: 16px;
-                    letter-spacing: 4px;
-                    font-weight: 600;
-                  "
-                  >Exquisite</span
-                >
-              </a>
-              <ul class="uk-navbar-nav uk-visible@m">
-                <li><a href="/">Home</a></li>
-                <li>
-                  <a href="#"
-                    >Company<span data-uk-navbar-parent-icon></span
-                  ></a>
-                  <div class="uk-navbar-dropdown">
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      <li>
-                        <a href="/about">About</a>
-                      </li>
-
-                      <li><a href="/careers">Careers</a></li>
-                    </ul>
-                  </div>
+                    font-size: 18px;
+                    letter-spacing: 2px;
+                    font-weight: 800;
+                    margin-left: 10px;
+                  ">Exquisite</span>
+            </a>
+            <ul class="uk-navbar-nav uk-visible@m" style="margin-left: 40px;">
+              <li><a href="/" class="menu-link-color">Home</a></li>
+              <li>
+                <a href="#" class="menu-link-color">Company<span data-uk-navbar-parent-icon></span></a>
+                <div class="uk-navbar-dropdown glass-card">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li>
+                      <a href="/about/">About Us</a>
+                    </li>
+                    <li><a href="/careers">Careers</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="/pricing" class="menu-link-color">Investment Plans</a></li>
+              <li>
+                <a href="#" class="menu-link-color">Resources<span data-uk-navbar-parent-icon></span></a>
+                <div class="uk-navbar-dropdown glass-card">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li><a href="/help-center">Support / FAQ</a></li>
+                    <li><a href="/customers">Partner Status</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="/rules" class="menu-link-color">Terms</a></li>
+              <li><a href="/contact/" class="menu-link-color">Support</a></li>
+            </ul>
+          </div>
+          <div class="uk-navbar-right">
+            <div class="uk-navbar-item uk-visible@m in-optional-nav">
+              <a href="/login" class="uk-button uk-button-text" style="color: #fff; margin-right: 20px;">Log in</a>
+              <a href="/sign-up" class="btn-premium">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- header end -->
+  <!-- breadcrumb content begin -->
+  <div class="uk-section uk-padding-remove-vertical in-equity-breadcrumb">
+    <div class="uk-container">
+      <div class="uk-grid">
+        <div class="uk-width-1-1">
+          <ul class="uk-breadcrumb">
+            <li><a href="/" style="color: var(--accent-cyan);">Home</a></li>
+            <li><span style="color: #fff;">Investment Plans</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- breadcrumb content end -->
+  <main>
+    <!-- section content begin -->
+    <!-- hero content begin -->
+    <section class="uk-section uk-section-large uk-flex uk-flex-middle"
+      style="background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.15), transparent 40%), radial-gradient(circle at bottom left, rgba(0, 242, 255, 0.15), transparent 40%);">
+      <div class="uk-container">
+        <div class="uk-grid-large uk-flex-middle" data-uk-grid>
+          <div class="uk-width-2-3@m animate-fade-up">
+            <h1 class="hero-title">
+              Strategic <span class="hero-highlight">Growth Channels</span>
+            </h1>
+            <p class="uk-text-lead uk-margin-medium-top" style="color: var(--text-secondary); max-width: 650px;">
+              Explore our institutional-grade investment paths designed to optimize your portfolio. Whether you're
+              seeking balanced stability or high-velocity returns, we provide the architecture for your success.
+            </p>
+          </div>
+          <div class="uk-width-1-3@m animate-fade-up" style="animation-delay: 0.2s;">
+            <div class="glass-card uk-padding-small" style="position: relative; overflow: hidden; border-radius: 40px;">
+              <img src="../img/premium/dashboard_preview.png" alt="Exquisite Portfolio Visual"
+                style="width: 100%; border-radius: 30px; transform: scale(1.05); filter: contrast(1.1) brightness(1.1);">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- hero content end -->
+    <!-- section content end -->
+    <!-- pricing sections begin -->
+    <section class="uk-section">
+      <div class="uk-container">
+        <div class="uk-grid uk-grid-large uk-child-width-1-2@m" data-uk-grid>
+          <!-- Basic Plan -->
+          <div class="animate-fade-up">
+            <div class="glass-card uk-card-body uk-padding-large" style="border-top: 4px solid var(--accent-cyan);">
+              <div class="uk-flex uk-flex-middle uk-flex-between">
+                <div>
+                  <h2 style="color: #fff; font-weight: 800; margin-bottom: 0;">Basic Plan</h2>
+                  <span
+                    style="color: var(--accent-cyan); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Entry
+                    Tier</span>
+                </div>
+                <div class="uk-text-right">
+                  <div style="font-size: 0.8rem; color: var(--text-secondary);">Funding</div>
+                  <div style="font-size: 1.2rem; font-weight: 700; color: #fff;">USD 500 - USD 9,999</div>
+                </div>
+              </div>
+              <hr style="border-color: rgba(255,255,255,0.05); margin: 25px 0;">
+              <ul class="uk-list uk-margin-medium-bottom">
+                <li class="uk-flex uk-flex-middle" style="color: var(--text-secondary); margin-bottom: 12px;">
+                  <i class="fas fa-check-circle uk-margin-small-right" style="color: var(--accent-cyan);"></i> 10%
+                  Return on Investment
                 </li>
-                <li><a href="#">Plans</a></li>
-
-                <li>
-                  <a href="#"
-                    >Resources<span data-uk-navbar-parent-icon></span
-                  ></a>
-                  <div class="uk-navbar-dropdown">
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      <li><a href="/help-center">FAQs</a></li>
-                      <li><a href="/customers">Customers</a></li>
-                    </ul>
-                  </div>
+                <li class="uk-flex uk-flex-middle" style="color: var(--text-secondary); margin-bottom: 12px;">
+                  <i class="fas fa-check-circle uk-margin-small-right" style="color: var(--accent-cyan);"></i> 7%
+                  Referral Commission
                 </li>
-                <li><a href="/rules">Terms</a></li>
-                <li><a href="/contact/">Contact Us</a></li>
-                <li class="custom-sign-up-btn">
-                  <a
-                    style="font-size: 16px"
-                    href="/sign-up/"
-                    class="uk-button uk-button-text"
-                    >Register<i
-                      class="fas fa-arrow-circle-right uk-margin-small-left"
-                    ></i
-                  ></a>
+                <li class="uk-flex uk-flex-middle" style="color: var(--text-secondary); margin-bottom: 12px;">
+                  <i class="fas fa-check-circle uk-margin-small-right" style="color: var(--accent-cyan);"></i> 24/7
+                  Priority Support
+                </li>
+                <li class="uk-flex uk-flex-middle" style="color: var(--text-secondary);">
+                  <i class="fas fa-check-circle uk-margin-small-right" style="color: var(--accent-cyan);"></i> Instant
+                  Capital Access
                 </li>
               </ul>
+              <a href="/sign-up" class="uk-button uk-button-text"
+                style="color: #fff; font-weight: 600; font-size: 1.1rem; border-bottom: 2px solid var(--accent-cyan);">
+                Initialize Account <i class="fas fa-arrow-right uk-margin-small-left"></i>
+              </a>
             </div>
-            <div class="uk-navbar-right">
-              <div class="uk-navbar-item uk-visible@m in-optional-nav">
-                <a href="/login" class="uk-button uk-button-text"
-                  >Log in<i
-                    class="fas fa-arrow-circle-right uk-margin-small-left"
-                  ></i
-                ></a>
-                <a href="/sign-up" class="uk-button uk-button-primary"
-                  >Sign up<i
-                    class="fas fa-arrow-circle-right uk-margin-small-left"
-                  ></i
-                ></a>
+          </div>
+
+          <!-- Standard Plan -->
+          <div class="animate-fade-up" style="animation-delay: 0.1s;">
+            <div class="glass-card uk-card-body uk-padding-large" style="border-top: 4px solid var(--accent-violet);">
+              <div class="uk-flex uk-flex-middle uk-flex-between">
+                <div>
+                  <h2 style="color: #fff; font-weight: 800; margin-bottom: 0;">Standard Plan</h2>
+                  <span
+                    style="color: var(--accent-violet); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Balanced
+                    Growth</span>
+                </div>
+                <div class="uk-text-right">
+                  <div style="font-size: 0.8rem; color: var(--text-secondary);">Funding</div>
+                  <div style="font-size: 1.2rem; font-weight: 700; color: #fff;">USD 10,000 - USD 49,999</div>
+                </div>
+              </div>
+              <hr style="border-color: rgba(255,255,255,0.05); margin: 25px 0;">
+              <ul class="uk-list uk-margin-medium-bottom">
+                <li class="uk-flex uk-flex-middle" style="color: var(--text-secondary); margin-bottom: 12px;">
+                  <i class="fas fa-check-circle uk-margin-small-right" style="color: var(--accent-violet);"></i> 20%
+                  Return on Investment
+                </li>
+                <li class="uk-flex uk-flex-middle" style="color: var(--text-secondary); margin-bottom: 12px;">
+                  <i class="fas fa-check-circle uk-margin-small-right" style="color: var(--accent-violet);"></i> 10%
+                  Referral Commission
+                </li>
+                <li class="uk-flex uk-flex-middle" style="color: var(--text-secondary); margin-bottom: 12px;">
+                  <i class="fas fa-check-circle uk-margin-small-right" style="color: var(--accent-violet);"></i>
+                  Strategic Portfolio Review
+                </li>
+                <li class="uk-flex uk-flex-middle" style="color: var(--text-secondary);">
+                  <i class="fas fa-check-circle uk-margin-small-right" style="color: var(--accent-violet);"></i> Instant
+                  Profit Settlement
+                </li>
+              </ul>
+              <a href="/sign-up" class="uk-button uk-button-text"
+                style="color: #fff; font-weight: 600; font-size: 1.1rem; border-bottom: 2px solid var(--accent-violet);">
+                Activate Portfolio <i class="fas fa-arrow-right uk-margin-small-left"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Premium Plan -->
+          <div class="animate-fade-up" style="animation-delay: 0.2s;">
+            <div class="glass-card uk-card-body uk-padding-large"
+              style="border-top: 4px solid var(--accent-cyan); background: linear-gradient(135deg, rgba(0, 242, 255, 0.05) 0%, transparent 100%);">
+              <div class="uk-flex uk-flex-middle uk-flex-between">
+                <div>
+                  <h2 style="color: #fff; font-weight: 800; margin-bottom: 0;">Premium Plan</h2>
+                  <span
+                    style="color: var(--accent-cyan); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">High
+                    Velocity</span>
+                </div>
+                <div class="uk-text-right">
+                  <div style="font-size: 0.8rem; color: var(--text-secondary);">Funding</div>
+                  <div style="font-size: 1.2rem; font-weight: 700; color: #fff;">USD 50,000 - USD 99,999</div>
+                </div>
+              </div>
+              <hr style="border-color: rgba(255,255,255,0.05); margin: 25px 0;">
+              <ul class="uk-list uk-margin-medium-bottom">
+                <li class="uk-flex uk-flex-middle" style="color: var(--text-secondary); margin-bottom: 12px;">
+                  <i class="fas fa-star uk-margin-small-right" style="color: var(--accent-cyan);"></i> 30% Return on
+                  Investment
+                </li>
+                <li class="uk-flex uk-flex-middle" style="color: var(--text-secondary); margin-bottom: 12px;">
+                  <i class="fas fa-star uk-margin-small-right" style="color: var(--accent-cyan);"></i> 15% Referral
+                  Commission
+                </li>
+                <li class="uk-flex uk-flex-middle" style="color: var(--text-secondary); margin-bottom: 12px;">
+                  <i class="fas fa-star uk-margin-small-right" style="color: var(--accent-cyan);"></i> Dedicated Asset
+                  Manager
+                </li>
+                <li class="uk-flex uk-flex-middle" style="color: var(--text-secondary);">
+                  <i class="fas fa-star uk-margin-small-right" style="color: var(--accent-cyan);"></i> Advanced Risk
+                  Mitigation
+                </li>
+              </ul>
+              <a href="/sign-up" class="btn-premium uk-width-1-1 uk-text-center">Optimize Yield Now</a>
+            </div>
+          </div>
+
+          <!-- VIP Plan -->
+          <div class="animate-fade-up" style="animation-delay: 0.3s;">
+            <div class="glass-card uk-card-body uk-padding-large"
+              style="border-top: 4px solid var(--accent-violet); background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, transparent 100%);">
+              <div class="uk-flex uk-flex-middle uk-flex-between">
+                <div>
+                  <h2 style="color: #fff; font-weight: 800; margin-bottom: 0;">VIP Plan</h2>
+                  <span
+                    style="color: var(--accent-violet); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Institutional
+                    Tier</span>
+                </div>
+                <div class="uk-text-right">
+                  <div style="font-size: 0.8rem; color: var(--text-secondary);">Funding</div>
+                  <div style="font-size: 1.2rem; font-weight: 700; color: #fff;">USD 100,000 - USD 1,000,000</div>
+                </div>
+              </div>
+              <hr style="border-color: rgba(255,255,255,0.05); margin: 25px 0;">
+              <ul class="uk-list uk-margin-medium-bottom">
+                <li class="uk-flex uk-flex-middle" style="color: var(--text-secondary); margin-bottom: 12px;">
+                  <i class="fas fa-star uk-margin-small-right" style="color: var(--accent-violet);"></i> 40% Return on
+                  Investment
+                </li>
+                <li class="uk-flex uk-flex-middle" style="color: var(--text-secondary); margin-bottom: 12px;">
+                  <i class="fas fa-star uk-margin-small-right" style="color: var(--accent-violet);"></i> 20% Referral
+                  Commission
+                </li>
+                <li class="uk-flex uk-flex-middle" style="color: var(--text-secondary); margin-bottom: 12px;">
+                  <i class="fas fa-star uk-margin-small-right" style="color: var(--accent-violet);"></i> Dedicated Asset
+                  Manager
+                </li>
+                <li class="uk-flex uk-flex-middle" style="color: var(--text-secondary);">
+                  <i class="fas fa-star uk-margin-small-right" style="color: var(--accent-violet);"></i> Global Priority
+                  Access
+                </li>
+              </ul>
+              <a href="/sign-up" class="btn-premium uk-width-1-1 uk-text-center">Authorize Institutional Account</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- pricing sections end -->
+    <!-- section content end -->
+  </main>
+  <!-- footer begin -->
+  <footer style="background: rgba(0,0,0,0.3); border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="uk-section">
+      <div class="uk-container uk-margin-top">
+        <div class="uk-grid">
+          <div class="uk-width-2-3@m">
+            <div class="uk-child-width-1-2@s uk-child-width-1-3@m" data-uk-grid="">
+              <div>
+                <h5 style="color: #fff; font-weight: 700;">Contact Us</h5>
+                <ul class="uk-list uk-link-text">
+                  <li>
+                    <a href="mailto:info@exquisiteinvestmentlimited.com"
+                      style="color: var(--text-secondary);">info@exquisiteinvestmentlimited.com</a>
+                  </li>
+                  <li>
+                    <span style="color: var(--text-secondary);">170 Church Road Mitcham, Surrey, England, CR4 3BW</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h5 style="color: #fff; font-weight: 700;">Company</h5>
+                <ul class="uk-list uk-link-text">
+                  <li><a href="/about/" style="color: var(--text-secondary);">About Us</a></li>
+                  <li><a href="/contact/" style="color: var(--text-secondary);">Contact</a></li>
+                  <li>
+                    <a href="/careers" style="color: var(--text-secondary);">Careers<span
+                        class="uk-label uk-margin-small-left in-label-small"
+                        style="background: var(--accent-cyan);">New</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="in-margin-top-60@s">
+                <h5 style="color: #fff; font-weight: 700;">Resources</h5>
+                <ul class="uk-list uk-link-text">
+                  <li><a href="/help-center" style="color: var(--text-secondary);">Support / FAQ</a></li>
+                  <li><a href="/customers" style="color: var(--text-secondary);">Partner Status</a></li>
+                </ul>
               </div>
             </div>
           </div>
-        </nav>
+        </div>
       </div>
-    </header>
-    <!-- header end -->
-    <!-- breadcrumb content begin -->
-    <div class="uk-section uk-padding-remove-vertical in-equity-breadcrumb">
+      <hr class="uk-margin-large" style="border-color: rgba(255,255,255,0.05);" />
       <div class="uk-container">
-        <div class="uk-grid">
-          <div class="uk-width-1-1">
-            <ul class="uk-breadcrumb">
-              <li><a href="/">Home</a></li>
-              <li><span>Pricing</span></li>
+        <div class="uk-grid uk-flex uk-flex-middle">
+          <div class="uk-width-2-3@m uk-text-small">
+            <ul class="uk-subnav uk-subnav-divider uk-visible@s" data-uk-margin="">
+              <li><a href="/rules" style="color: var(--text-secondary);">Risk Disclosure</a></li>
+              <li><a href="/rules" style="color: var(--text-secondary);">Privacy Policy</a></li>
+              <li><a href="/rules" style="color: var(--text-secondary);">AML Policy</a></li>
             </ul>
+            <p class="copyright-text" style="color: var(--text-secondary); opacity: 0.6;">
+              © 2026 Exquisite Investment Limited. All Rights Reserved.
+            </p>
+          </div>
+          <div class="uk-width-1-3@m uk-flex uk-flex-right uk-visible@m" style="opacity: 0.5;">
+            <span class="uk-margin-right"><img src="../img/in-lazy.gif" data-src="../img/in-footer-mastercard.svg"
+                alt="payment" width="34" height="21" data-uk-img="" /></span>
+            <span><img src="../img/in-lazy.gif" data-src="../img/in-footer-visa.svg" alt="payment" width="50"
+                height="16" data-uk-img="" /></span>
           </div>
         </div>
       </div>
     </div>
-    <!-- breadcrumb content end -->
-    <main>
-      <!-- section content begin -->
-      <div class="uk-section">
-        <div class="uk-container">
-          <div
-            class="uk-grid-match uk-child-width-1-2@s uk-child-width-1-3@m in-card-10"
-            data-uk-grid
-          >
-            <div class="uk-width-1-1">
-              <h1 class="uk-margin-remove">
-                Choose an <span class="in-highlight">investment</span> plan.
-              </h1>
-              <p class="uk-text-lead uk-text-muted uk-margin-small-top">
-                Select a plan of your choice.
-              </p>
-              <p>
-                Explore our tailored investment plans designed to suit your
-                financial goals and risk tolerance. Whether you're looking for
-                steady growth or higher returns, we offer flexible options to
-                meet your needs and help you build a secure financial future.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- section content end -->
-      <!-- section content begin -->
-      <div class="uk-section in-equity-17">
-        <div class="uk-container uk-margin-top uk-margin-medium-bottom">
-          <div class="uk-grid uk-flex uk-flex-center">
-            <div class="uk-width-3-5@m uk-text-center">
-              <h1 class="uk-margin-remove">
-                Choose your <span class="in-highlight">Investment</span> plan
-              </h1>
-              <p class="uk-text-lead uk-text-muted uk-margin-small-top">
-                Simply select your preferred investment plan in our application
-                form.
-              </p>
-            </div>
-            <div class="uk-width-3-4@m uk-margin-medium-top">
-              <div
-                class="uk-grid-collapse uk-child-width-1-2@m in-equity-pricing"
-                data-uk-grid
-              >
-                <div>
-                  <div
-                    class="uk-card uk-card-default uk-card-body uk-box-shadow-medium"
-                  >
-                    <p class="uk-text-small uk-text-muted uk-text-uppercase">
-                      Funding<span
-                        class="uk-label uk-margin-small-left in-label-small"
-                        >USD 500 - USD 9999</span
-                      >
-                    </p>
-                    <h2 class="uk-margin-top uk-margin-remove-bottom">
-                      Basic Plan
-                    </h2>
-                    <p class="uk-text-lead uk-text-muted uk-margin-remove-top">
-                      Benefits
-                    </p>
-                    <hr />
-                    <ul class="uk-list in-list-check">
-                      <li>10% return on investment</li>
-                      <li>7% referral commission</li>
-                      <li>24/7 customer support</li>
-                      <li>Instant withdrawals</li>
-                    </ul>
-                    <a
-                      href="#"
-                      class="uk-button uk-button-default uk-border-rounded uk-align-center"
-                      >Open an account<i
-                        class="fas fa-arrow-circle-right uk-margin-small-left"
-                      ></i
-                    ></a>
-                  </div>
-                </div>
-                <div>
-                  <div
-                    class="uk-card uk-card-default uk-card-body uk-box-shadow-large"
-                  >
-                    <p class="uk-text-small uk-text-muted uk-text-uppercase">
-                      Funding<span
-                        class="uk-label uk-margin-small-left in-label-small"
-                        >USD 10000 - USD 49999</span
-                      >
-                    </p>
-                    <h2 class="uk-margin-top uk-margin-remove-bottom">
-                      Standard Plan
-                    </h2>
-                    <p class="uk-text-lead uk-text-muted uk-margin-remove-top">
-                      Benefits
-                    </p>
-                    <hr />
-                    <ul class="uk-list in-list-check">
-                      <li>20% return on investment</li>
-                      <li>10% referral commission</li>
-                      <li>24/7 customer support</li>
-                      <li>Instant withdrawals</li>
-                    </ul>
+    <div id="google_translate_element" style="position: fixed; bottom: 20px; left: 20px; z-index: 400"></div>
+  </footer>
+  <!-- footer end -->
+  <!-- to top begin -->
+  <a href="#" class="to-top uk-visible@m" data-uk-scroll>
+    Top<i class="fas fa-chevron-up"></i>
+  </a>
+  <!-- to top end -->
+  <!-- javascript -->
+  <script src="../js/utilities.min.js"></script>
+  <script src="../js/config-theme.js"></script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: "en" },
+        "google_translate_element"
+      );
+    }
+  </script>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
 
-                    <a
-                      href="#"
-                      class="uk-button uk-button-default uk-border-rounded uk-align-center"
-                      >Open an account<i
-                        class="fas fa-arrow-circle-right uk-margin-small-left"
-                      ></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="uk-width-3-4@m uk-margin-medium-top">
-              <div
-                class="uk-grid-collapse uk-child-width-1-2@m in-equity-pricing"
-                data-uk-grid
-              >
-                <div>
-                  <div
-                    class="uk-card uk-card-default uk-card-body uk-box-shadow-medium"
-                  >
-                    <p class="uk-text-small uk-text-muted uk-text-uppercase">
-                      Funding<span
-                        class="uk-label uk-margin-small-left in-label-small"
-                        >USD 50000 - USD 99999</span
-                      >
-                    </p>
-                    <h2 class="uk-margin-top uk-margin-remove-bottom">
-                      Premium Plan
-                    </h2>
-                    <p class="uk-text-lead uk-text-muted uk-margin-remove-top">
-                      Benefits
-                    </p>
-                    <hr />
-                    <ul class="uk-list in-list-check">
-                      <li>30% return on investment</li>
-                      <li>15% referral commission</li>
-                      <li>24/7 customer support</li>
-                      <li>Instant withdrawals</li>
-                    </ul>
-                    <a
-                      href="#"
-                      class="uk-button uk-button-primary uk-border-rounded uk-align-center"
-                      >Open an account<i
-                        class="fas fa-arrow-circle-right uk-margin-small-left"
-                      ></i
-                    ></a>
-                  </div>
-                </div>
-                <div>
-                  <div
-                    class="uk-card uk-card-default uk-card-body uk-box-shadow-large"
-                  >
-                    <p class="uk-text-small uk-text-muted uk-text-uppercase">
-                      Funding<span
-                        class="uk-label uk-margin-small-left in-label-small"
-                        >USD 100000 - USD 1000000</span
-                      >
-                    </p>
-                    <h2 class="uk-margin-top uk-margin-remove-bottom">
-                      VIP Plan
-                    </h2>
-                    <p class="uk-text-lead uk-text-muted uk-margin-remove-top">
-                      Benefits
-                    </p>
-                    <hr />
-                    <ul class="uk-list in-list-check">
-                      <li>40% return on investment</li>
-                      <li>20% referral commission</li>
-                      <li>24/7 customer support</li>
-                      <li>Instant withdrawals</li>
-                    </ul>
-                    <a
-                      href="#"
-                      class="uk-button uk-button-primary uk-border-rounded uk-align-center"
-                      >Open an account<i
-                        class="fas fa-arrow-circle-right uk-margin-small-left"
-                      ></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- section content end -->
-    </main>
-    <!-- footer begin -->
-    <footer>
-      <div class="uk-section">
-        <div class="uk-container uk-margin-top">
-          <div class="uk-grid">
-            <div class="uk-width-2-3@m">
-              <div
-                class="uk-child-width-1-2@s uk-child-width-1-3@m"
-                data-uk-grid=""
-              >
-                <div>
-                  <h5>Contact Us</h5>
-                  <ul class="uk-list uk-link-text">
-                    <li>
-                      <a href="mailto:info@exquisiteinvestmentlimited.com"
-                        >info@exquisiteinvestmentlimited.com</a
-                      >
-                    </li>
-                    <li>
-                      <span
-                        >170 Church Road Mitcham, Surrey, England, CR4 3BW</span
-                      >
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h5>Company</h5>
-                  <ul class="uk-list uk-link-text">
-                    <li><a href="#">About</a></li>
-
-                    <li><a href="#">Contact</a></li>
-                    <li>
-                      <a href="#"
-                        >Career<span
-                          class="uk-label uk-margin-small-left in-label-small"
-                          >New</span
-                        ></a
-                      >
-                    </li>
-                  </ul>
-                </div>
-                <div class="in-margin-top-60@s">
-                  <h5>Resources</h5>
-                  <ul class="uk-list uk-link-text">
-                    <li><a href="/help-center">FAQs</a></li>
-                    <li><a href="/customers">Customers</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr class="uk-margin-large" />
-        <div class="uk-container">
-          <div class="uk-grid uk-flex uk-flex-middle">
-            <div class="uk-width-2-3@m uk-text-small">
-              <ul
-                class="uk-subnav uk-subnav-divider uk-visible@s"
-                data-uk-margin=""
-              >
-                <li><a href="/rules">Risk disclosure</a></li>
-                <li><a href="/rules">Privacy policy</a></li>
-                <li><a href="/rules">Return policy</a></li>
-                <li><a href="/rules">Customer Agreement</a></li>
-                <li><a href="/rules">AML policy</a></li>
-              </ul>
-              <p class="copyright-text">
-                ©2024 Exquisite Investment Limited. All Rights Reserved.
-              </p>
-            </div>
-            <div class="uk-width-1-3@m uk-flex uk-flex-right uk-visible@m">
-              <span class="uk-margin-right"
-                ><img
-                  src="../img/in-lazy.gif"
-                  data-src="../img/in-footer-mastercard.svg"
-                  alt="footer-payment"
-                  width="34"
-                  height="21"
-                  data-uk-img=""
-              /></span>
-              <span
-                ><img
-                  src="../img/in-lazy.gif"
-                  data-src="../img/in-footer-visa.svg"
-                  alt="footer-payment"
-                  width="50"
-                  height="16"
-                  data-uk-img=""
-              /></span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        id="google_translate_element"
-        style="position: fixed; bottom: 20px; left: 20px; z-index: 400"
-      ></div>
-    </footer>
-    <!-- footer end -->
-    <!-- to top begin -->
-    <a href="#" class="to-top uk-visible@m" data-uk-scroll>
-      Top<i class="fas fa-chevron-up"></i>
-    </a>
-    <!-- to top end -->
-    <!-- javascript -->
-    <script src="../js/utilities.min.js"></script>
-    <script src="../js/config-theme.js"></script>
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          { pageLanguage: "en" },
-          "google_translate_element"
-        );
-      }
-    </script>
-    <script
-      type="text/javascript"
-      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script>
-  </body>
 </html>
