@@ -4,7 +4,10 @@ document
     event.preventDefault();
 
     const submitBtn = document.getElementById("submit-btn");
-    submitBtn.textContent = "Please wait..."; // Change button text
+    const originalText = submitBtn.textContent;
+    submitBtn.innerHTML = '<i class="fas fa-circle-notch fa-spin uk-margin-small-right"></i> Establishing Protocol...';
+    submitBtn.style.opacity = '0.7';
+    submitBtn.style.pointerEvents = 'none';
 
     const referralIdInputValue = document.getElementById("referralId").value;
 
@@ -20,9 +23,10 @@ document
       formData.referralId = referralIdInputValue;
     }
 
+    let response;
     try {
-      const response = await fetch(
-        "https://exquisute-backend.onrender.com/api/v1/signup",
+      response = await fetch(
+        "https://api.exquisiteinvestmentlimited.com/api/v1/signup",
         {
           method: "POST",
           headers: {
@@ -44,7 +48,9 @@ document
           backgroundColor: "#28a745",
         }).showToast(); 
         localStorage.setItem("userEmail", formData.email);
-        window.location.href =  "/dashboard"; // "/sign-up/email-verification";
+        setTimeout(() => {
+          window.location.href = "/dashboard"; // "/sign-up/email-verification";
+        }, 1500);
       } else {
         // Show error toast
         Toastify({
@@ -64,7 +70,11 @@ document
         backgroundColor: "#dc3545",
       }).showToast();
     } finally {
-      submitBtn.textContent = "Sign Up"; // Reset button text
+      if (!response || !response.ok) {
+        submitBtn.textContent = originalText;
+        submitBtn.style.opacity = '1';
+        submitBtn.style.pointerEvents = 'auto';
+      }
     }
   });
 

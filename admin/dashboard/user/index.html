@@ -1,753 +1,619 @@
 <!DOCTYPE html>
 <html lang="en" data-topbar-color="dark">
-  <head>
-    <meta charset="utf-8" />
-    <title>Admin Dashboard - Exquisite Investment Limited</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta content="Exquisite Investment Limited" name="author" />
+<head>
+  <meta charset="utf-8" />
+  <title>Admin Dashboard - Exquisite Investment Limited</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- favicon -->
-    <link
-      rel="shortcut icon"
-      href="../../../img/favicon.ico"
-      type="image/x-icon"
-    />
-    <!-- touch icon -->
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="../../../img/apple-touch-icon.png"
-    />
+  <meta content="Exquisite Investment Limited" name="author" />
 
-    <!-- Theme Config Js -->
-    <script src="../../../dashboard-assets/js/head.js"></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../../img/favicon.ico" type="image/x-icon" />
+  <!-- touch icon -->
+  <link rel="apple-touch-icon-precomposed" href="../../../img/apple-touch-icon.png" />
 
-    <!-- Bootstrap css -->
-    <link
-      href="../../../dashboard-assets/css/bootstrap.min.css"
-      rel="stylesheet"
-      type="text/css"
-      id="app-style"
-    />
+  <!-- Theme Config Js -->
+  <script src="../../../dashboard-assets/js/head.js"></script>
 
-    <!-- App css -->
-    <link
-      href="../../../dashboard-assets/css/app.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+  <!-- Bootstrap css -->
+  <link href="../../../dashboard-assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="app-style" />
 
-    <link rel="stylesheet" href="../../css/new-styles.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <style>
-      /* Loading Spinner Styles */
-      #loading-spinner {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        display: none;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
+  <!-- App css -->
+  <link href="../../../dashboard-assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/new-styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    /* Loading Spinner Styles */
+    #loading-spinner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #loading-spinner.show {
+      display: flex;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #fcb42d;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
       }
 
-      #loading-spinner.show {
-        display: flex;
+      100% {
+        transform: rotate(360deg);
       }
+    }
+  </style>
 
-      .spinner {
-        width: 50px;
-        height: 50px;
-        border: 5px solid #f3f3f3;
-        border-top: 5px solid #fcb42d;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/39a80cd06c.js" crossorigin="anonymous"></script>
+</head>
 
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
+<body>
+  <!-- Loading Spinner -->
+  <div id="loading-spinner">
+    <div class="spinner"></div>
+  </div>
+  <!-- Begin page -->
+  <div id="wrapper">
+    <!-- ========== Menu ========== -->
+    <div class="app-menu">
+      <!-- Brand Logo -->
+      <div class="logo-box"></div>
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
-    />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/toastify-js"
-    ></script>
-    <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/39a80cd06c.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+      <!-- menu-left -->
+      <div class="scrollbar">
+        <!--- Menu -->
+        <ul class="menu">
+          <li class="menu-title">Main</li>
 
-  <body>
-    <!-- Loading Spinner -->
-    <div id="loading-spinner">
-      <div class="spinner"></div>
+          <li class="menu-item">
+            <a href="/admin/dashboard/" class="menu-link">
+              <span class="menu-icon"><i style="font-size: 13px; color: #fcb42d" class="fa-solid fa-tv"></i></span>
+              <span style="font-size: 14px; color: #fcb42d" class="menu-text">
+                Dashboard
+              </span>
+            </a>
+          </li>
+
+          <li class="menu-title">Finances</li>
+
+          <li class="menu-item">
+            <a href="#menuEcommerce" data-bs-toggle="collapse" class="menu-link">
+              <span class="menu-icon"><i style="font-size: 13px" class="fa-solid fa-dollar-sign"></i></span>
+              <span style="font-size: 14px" class="menu-text">
+                Transactions
+              </span>
+              <span class="menu-arrow">
+                <i style="font-size: 11px" class="fa-solid fa-angle-right"></i>
+              </span>
+            </a>
+            <div class="collapse" id="menuEcommerce">
+              <ul class="sub-menu">
+                <li class="menu-item">
+                  <a href="/admin/deposits/" class="menu-link">
+                    <span style="font-size: 14px" class="menu-text">Deposits</span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="/admin/withdrawals/" class="menu-link">
+                    <span style="font-size: 14px" class="menu-text">Withdrawals</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="menu-title">Settings</li>
+          <li class="menu-item">
+            <a href="/admin/wallet/" class="menu-link">
+              <span class="menu-icon"><i style="font-size: 13px" class="fa-solid fa-gears"></i></span>
+              <span style="font-size: 14px" class="menu-text"> Wallet </span>
+            </a>
+          </li>
+          <li class="menu-item" onclick="handleLogout()">
+            <a href="#" class="menu-link">
+              <span class="menu-icon menu-link-color"><i style="font-size: 13px"
+                  class="fa-solid fa-right-from-bracket"></i></span>
+              <span style="font-size: 14px" class="menu-text menu-link-color">
+                Logout
+              </span>
+            </a>
+          </li>
+        </ul>
+        <!--- End Menu -->
+        <div class="clearfix"></div>
+      </div>
     </div>
-    <!-- Begin page -->
-    <div id="wrapper">
-      <!-- ========== Menu ========== -->
-      <div class="app-menu">
-        <!-- Brand Logo -->
-        <div class="logo-box"></div>
+    <!-- ========== Left menu End ========== -->
 
-        <!-- menu-left -->
-        <div class="scrollbar">
-          <!--- Menu -->
-          <ul class="menu">
-            <li class="menu-title">Main</li>
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
 
-            <li class="menu-item">
-              <a href="/admin/dashboard/" class="menu-link">
-                <span class="menu-icon"
-                  ><i
-                    style="font-size: 13px; color: #fcb42d"
-                    class="fa-solid fa-tv"
-                  ></i
-                ></span>
-                <span style="font-size: 14px; color: #fcb42d" class="menu-text">
-                  Dashboard
-                </span>
-              </a>
-            </li>
+    <div class="content-page">
+      <!-- ========== Topbar Start ========== -->
+      <div class="navbar-custom">
+        <div class="topbar">
+          <div class="topbar-menu d-flex align-items-center gap-1">
+            <!-- Sidebar Menu Toggle Button -->
+            <button class="button-toggle-menu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-menu">
+                <line x1="4" x2="20" y1="12" y2="12" />
+                <line x1="4" x2="20" y1="6" y2="6" />
+                <line x1="4" x2="20" y1="18" y2="18" />
+              </svg>
+            </button>
+          </div>
 
-            <li class="menu-title">Finances</li>
-
-            <li class="menu-item">
-              <a
-                href="#menuEcommerce"
-                data-bs-toggle="collapse"
-                class="menu-link"
-              >
-                <span class="menu-icon"
-                  ><i
-                    style="font-size: 13px"
-                    class="fa-solid fa-dollar-sign"
-                  ></i
-                ></span>
-                <span style="font-size: 14px" class="menu-text">
-                  Transactions
-                </span>
-                <span class="menu-arrow">
-                  <i
-                    style="font-size: 11px"
-                    class="fa-solid fa-angle-right"
-                  ></i>
-                </span>
-              </a>
-              <div class="collapse" id="menuEcommerce">
-                <ul class="sub-menu">
-                  <li class="menu-item">
-                    <a href="/admin/deposits/" class="menu-link">
-                      <span style="font-size: 14px" class="menu-text"
-                        >Deposits</span
-                      >
-                    </a>
-                  </li>
-                  <li class="menu-item">
-                    <a href="/admin/withdrawals/" class="menu-link">
-                      <span style="font-size: 14px" class="menu-text"
-                        >Withdrawals</span
-                      >
-                    </a>
-                  </li>
-                </ul>
+          <ul class="topbar-menu d-flex align-items-center">
+            <!-- Light/Dark Mode Toggle Button -->
+            <li class="d-inline-block d-sm-inline-block">
+              <div class="nav-link waves-effect waves-light" id="light-dark-mode">
+                <i style="font-size: 20px" class="ri-moon-line"></i>
               </div>
             </li>
 
-            <li class="menu-title">Settings</li>
-            <li class="menu-item">
-              <a href="/admin/wallet/" class="menu-link">
-                <span class="menu-icon"
-                  ><i style="font-size: 13px" class="fa-solid fa-gears"></i
-                ></span>
-                <span style="font-size: 14px" class="menu-text"> Wallet </span>
-              </a>
-            </li>
-            <li class="menu-item" onclick="handleLogout()">
-              <a href="#" class="menu-link">
-                <span class="menu-icon menu-link-color"
-                  ><i
-                    style="font-size: 13px"
-                    class="fa-solid fa-right-from-bracket"
-                  ></i
-                ></span>
-                <span style="font-size: 14px" class="menu-text menu-link-color">
-                  Logout
+            <!-- User Dropdown -->
+            <li class="dropdown inline-block">
+              <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light" data-bs-toggle="dropdown"
+                href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                <span class="ms-1 inline-block">
+                  <span id="fullName"></span> &nbsp;
                 </span>
               </a>
             </li>
           </ul>
-          <!--- End Menu -->
-          <div class="clearfix"></div>
         </div>
       </div>
-      <!-- ========== Left menu End ========== -->
+      <!-- ========== Topbar End ========== -->
 
-      <!-- ============================================================== -->
-      <!-- Start Page Content here -->
-      <!-- ============================================================== -->
+      <div class="content">
+        <!-- Start Content-->
+        <div class="container-fluid">
+          <!-- start page title -->
+          <div class="row">
+            <div class="col-12">
+              <div class="page-title-box">
+                <div class="page-title-right">
+                  <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item">
+                      <a style="color: #fcb42d" href="#">Home </a>
+                    </li>
 
-      <div class="content-page">
-        <!-- ========== Topbar Start ========== -->
-        <div class="navbar-custom">
-          <div class="topbar">
-            <div class="topbar-menu d-flex align-items-center gap-1">
-              <!-- Sidebar Menu Toggle Button -->
-              <button class="button-toggle-menu">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-menu"
-                >
-                  <line x1="4" x2="20" y1="12" y2="12" />
-                  <line x1="4" x2="20" y1="6" y2="6" />
-                  <line x1="4" x2="20" y1="18" y2="18" />
-                </svg>
-              </button>
-            </div>
-
-            <ul class="topbar-menu d-flex align-items-center">
-              <!-- Light/Dark Mode Toggle Button -->
-              <li class="d-inline-block d-sm-inline-block">
-                <div
-                  class="nav-link waves-effect waves-light"
-                  id="light-dark-mode"
-                >
-                  <i style="font-size: 20px" class="ri-moon-line"></i>
+                    <li class="breadcrumb-item active">
+                      <i style="font-size: 9px" class="fas fa-angle-right"></i>
+                    </li>
+                    <li class="breadcrumb-item">
+                      <a style="color: #fcb42d" href="/dashboard/">Dashboard
+                      </a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                      <i style="font-size: 9px" class="fas fa-angle-right"></i>
+                    </li>
+                    <li class="breadcrumb-item active">User</li>
+                  </ol>
                 </div>
-              </li>
-
-              <!-- User Dropdown -->
-              <li class="dropdown inline-block">
-                <a
-                  class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light"
-                  data-bs-toggle="dropdown"
-                  href="#"
-                  role="button"
-                  aria-haspopup="false"
-                  aria-expanded="false"
-                >
-                  <span class="ms-1 inline-block">
-                    <span id="fullName"></span> &nbsp;
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- ========== Topbar End ========== -->
-
-        <div class="content">
-          <!-- Start Content-->
-          <div class="container-fluid">
-            <!-- start page title -->
-            <div class="row">
-              <div class="col-12">
-                <div class="page-title-box">
-                  <div class="page-title-right">
-                    <ol class="breadcrumb m-0">
-                      <li class="breadcrumb-item">
-                        <a style="color: #fcb42d" href="#">Home </a>
-                      </li>
-
-                      <li class="breadcrumb-item active">
-                        <i
-                          style="font-size: 9px"
-                          class="fas fa-angle-right"
-                        ></i>
-                      </li>
-                      <li class="breadcrumb-item">
-                        <a style="color: #fcb42d" href="/dashboard/"
-                          >Dashboard
-                        </a>
-                      </li>
-                      <li class="breadcrumb-item active">
-                        <i
-                          style="font-size: 9px"
-                          class="fas fa-angle-right"
-                        ></i>
-                      </li>
-                      <li class="breadcrumb-item active">User</li>
-                    </ol>
-                  </div>
-                  <h4 class="page-title">Update User</h4>
-                </div>
+                <h4 class="page-title">Update User</h4>
               </div>
             </div>
-            <!-- end page title -->
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <!-- end col-->
-                      <div class="col-lg-12">
-                        <div class="tab-content">
-                          <div
-                            class="tab-pane fade active show"
-                            id="custom-v-pills-billing"
-                            role="tabpanel"
-                            aria-labelledby="custom-v-pills-billing-tab"
-                          >
-                            <div>
-                              <h4 class="header-title">Update User</h4>
+          </div>
+          <!-- end page title -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <!-- end col-->
+                    <div class="col-lg-12">
+                      <div class="tab-content">
+                        <div class="tab-pane fade active show" id="custom-v-pills-billing" role="tabpanel"
+                          aria-labelledby="custom-v-pills-billing-tab">
+                          <div>
+                            <h4 class="header-title">Update User</h4>
 
-                              <p class="sub-header">
-                                Make changes to the user's account details.
-                              </p>
-                              <form id="edit-user-form">
-                                <div class="row">
-                                  <div class="col-12">
-                                    <div class="mb-3">
-                                      <label class="form-label"
-                                        >Account Balance</label
-                                      >
-                                      <input
-                                        class="form-control"
-                                        type="text"
-                                        placeholder="Enter Balance"
-                                        id="balance"
-                                        required
-                                      />
-                                    </div>
+                            <p class="sub-header">
+                              Make changes to the user's account details.
+                            </p>
+                            <form id="edit-user-form">
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="mb-3">
+                                    <label class="form-label">Account Balance</label>
+                                    <input class="form-control" type="text" placeholder="Enter Balance" id="balance"
+                                      required />
                                   </div>
                                 </div>
-                                <div class="row">
-                                  <div class="col-12">
-                                    <div class="mb-3">
-                                      <label class="form-label"
-                                        >User Profits</label
-                                      >
-                                      <input
-                                        class="form-control"
-                                        type="text"
-                                        placeholder="Enter Profits"
-                                        id="profits"
-                                        required
-                                      />
-                                    </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="mb-3">
+                                    <label class="form-label">User Profits</label>
+                                    <input class="form-control" type="text" placeholder="Enter Profits" id="profits"
+                                      required />
                                   </div>
                                 </div>
-                                <div class="row">
-                                  <div class="col-12">
-                                    <div class="mb-3">
-                                      <label class="form-label">Username</label>
-                                      <input
-                                        class="form-control"
-                                        type="text"
-                                        placeholder="Enter Username"
-                                        id="username"
-                                        required
-                                      />
-                                    </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="mb-3">
+                                    <label class="form-label">Username</label>
+                                    <input class="form-control" type="text" placeholder="Enter Username" id="username"
+                                      required />
                                   </div>
                                 </div>
-                                <div class="row">
-                                  <div class="col-12">
-                                    <div class="mb-3">
-                                      <label class="form-label"
-                                        >Bitcoin address</label
-                                      >
-                                      <input
-                                        class="form-control"
-                                        type="text"
-                                        placeholder="Enter Bitcoin Address"
-                                        id="bitcoinAddress"
-                                      />
-                                    </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="mb-3">
+                                    <label class="form-label">Bitcoin address</label>
+                                    <input class="form-control" type="text" placeholder="Enter Bitcoin Address"
+                                      id="bitcoinAddress" />
                                   </div>
                                 </div>
+                              </div>
 
-                                <div class="row">
-                                  <!-- end col -->
-                                  <div class="col-sm-12">
-                                    <div class="text-end">
-                                      <button
-                                        type="submit"
-                                        id="submit-btn-text-edit-user"
-                                        class="btn btn-success"
-                                        style="
+                              <div class="row">
+                                <!-- end col -->
+                                <div class="col-sm-12">
+                                  <div class="text-end">
+                                    <button type="submit" id="submit-btn-text-edit-user" class="btn btn-success" style="
                                           background-color: #fcb42d;
                                           border: 1px solid #fcb42d;
                                           border-radius: 25px;
-                                        "
-                                      >
-                                        Update details
-                                      </button>
-                                    </div>
+                                        ">
+                                      Update details
+                                    </button>
                                   </div>
-                                  <!-- end col -->
                                 </div>
-                                <!-- end row -->
-                              </form>
-                            </div>
+                                <!-- end col -->
+                              </div>
+                              <!-- end row -->
+                            </form>
                           </div>
                         </div>
                       </div>
-                      <!-- end col-->
                     </div>
-                    <!-- end row-->
+                    <!-- end col-->
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <!-- end col-->
-                      <div class="col-lg-12">
-                        <div class="tab-content">
-                          <div
-                            class="tab-pane fade active show"
-                            id="custom-v-pills-billing"
-                            role="tabpanel"
-                            aria-labelledby="custom-v-pills-billing-tab"
-                          >
-                            <div>
-                              <h4 class="header-title">Danger zone</h4>
-
-                              <p class="sub-header">
-                                Enter username to delete user's account
-                              </p>
-                              <form id="delete-user-form">
-                                <div class="row">
-                                  <div class="col-12">
-                                    <div class="mb-3">
-                                      <label for="amount" class="form-label"
-                                        >Username</label
-                                      >
-                                      <input
-                                        class="form-control"
-                                        type="text"
-                                        placeholder="Enter Username"
-                                        id="usernameToBeDeleted"
-                                        required
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <div class="row">
-                                  <!-- end col -->
-                                  <div class="col-sm-12">
-                                    <div class="text-end">
-                                      <button
-                                        type="submit"
-                                        id="submit-btn-text-delete-user"
-                                        class="btn btn-success"
-                                        style="
-                                          background-color: red;
-                                          border: 1px solid red;
-                                          border-radius: 25px;
-                                        "
-                                      >
-                                        Delete user
-                                      </button>
-                                    </div>
-                                  </div>
-                                  <!-- end col -->
-                                </div>
-                                <!-- end row -->
-                              </form>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- end col-->
-                    </div>
-                    <!-- end row-->
-                  </div>
+                  <!-- end row-->
                 </div>
               </div>
             </div>
           </div>
-          <!-- container -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <!-- end col-->
+                    <div class="col-lg-12">
+                      <div class="tab-content">
+                        <div class="tab-pane fade active show" id="custom-v-pills-billing" role="tabpanel"
+                          aria-labelledby="custom-v-pills-billing-tab">
+                          <div>
+                            <h4 class="header-title">Danger zone</h4>
+
+                            <p class="sub-header">
+                              Enter username to delete user's account
+                            </p>
+                            <form id="delete-user-form">
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="mb-3">
+                                    <label for="amount" class="form-label">Username</label>
+                                    <input class="form-control" type="text" placeholder="Enter Username"
+                                      id="usernameToBeDeleted" required />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <!-- end col -->
+                                <div class="col-sm-12">
+                                  <div class="text-end">
+                                    <button type="submit" id="submit-btn-text-delete-user" class="btn btn-success"
+                                      style="
+                                          background-color: red;
+                                          border: 1px solid red;
+                                          border-radius: 25px;
+                                        ">
+                                      Delete user
+                                    </button>
+                                  </div>
+                                </div>
+                                <!-- end col -->
+                              </div>
+                              <!-- end row -->
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end col-->
+                  </div>
+                  <!-- end row-->
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- content -->
+        <!-- container -->
       </div>
-      <div
-        id="google_translate_element"
-        style="position: fixed; bottom: 20px; left: 20px; z-index: 400"
-      ></div>
+      <!-- content -->
     </div>
+    <div id="google_translate_element" style="position: fixed; bottom: 20px; left: 20px; z-index: 400"></div>
+  </div>
 
-    <script>
-      const token = localStorage.getItem("adminToken");
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      const username = urlParams.get("username");
+  <script>
+    const token = localStorage.getItem("adminToken");
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const username = urlParams.get("username");
 
-      // Loading spinner functions
-      function showLoadingSpinner() {
-        document.getElementById("loading-spinner").classList.add("show");
-      }
+    // Loading spinner functions
+    function showLoadingSpinner() {
+      document.getElementById("loading-spinner").classList.add("show");
+    }
 
-      function hideLoadingSpinner() {
-        document.getElementById("loading-spinner").classList.remove("show");
-      }
+    function hideLoadingSpinner() {
+      document.getElementById("loading-spinner").classList.remove("show");
+    }
 
-      document.addEventListener("DOMContentLoaded", async function () {
-        if (!token) {
-          window.location.href = "/admin/login";
-        } else if (!username) {
-          window.location.href = "/admin/dashboard";
-        } else {
-          showLoadingSpinner();
-          var requestOptions = {
-            method: "GET",
-            redirect: "follow",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          };
+    document.addEventListener("DOMContentLoaded", async function () {
+      if (!token) {
+        window.location.href = "/admin/login";
+      } else if (!username) {
+        window.location.href = "/admin/dashboard";
+      } else {
+        showLoadingSpinner();
+        var requestOptions = {
+          method: "GET",
+          redirect: "follow",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        };
 
-          try {
-            let request = await fetch(
-              "https://exquisute-backend.onrender.com/api/v1/admin/details",
-              requestOptions
-            );
-            let userDetailsRequest = await fetch(
-              `https://exquisute-backend.onrender.com/api/v1/admin/user/details?userName=${username}`,
-              requestOptions
-            );
-            let response = await request.json();
-            let userDetailsResponse = await userDetailsRequest.json();
+        try {
+          let request = await fetch(
+            "https://api.exquisiteinvestmentlimited.com/api/v1/admin/details",
+            requestOptions
+          );
+          let userDetailsRequest = await fetch(
+            `https://api.exquisiteinvestmentlimited.com/api/v1/admin/user/details?userName=${username}`,
+            requestOptions
+          );
+          let response = await request.json();
+          let userDetailsResponse = await userDetailsRequest.json();
 
-            if (request.ok) {
-              document.getElementById("fullName").textContent =
-                response?.data?.firstName + " " + response?.data?.lastName;
-            } else {
-              Toastify({
-                text: response?.description || "Failed to fetch data",
-                duration: 3000,
-                gravity: "top",
-                position: "center",
-                backgroundColor: "#dc3545",
-              }).showToast();
-
-              if (
-                response?.description === "Not authenticated" ||
-                userDetailsResponse?.description === "Not authenticated"
-              ) {
-                localStorage.removeItem("adminToken");
-                window.location.href = "/admin/login";
-              }
-            }
-            if (userDetailsRequest.ok) {
-              const data = userDetailsResponse.data;
-              document.getElementById("balance").value = data?.activeDeposit;
-              document.getElementById("profits").value = data?.profit;
-              document.getElementById("username").value = data?.userName;
-              document.getElementById("bitcoinAddress").value =
-                data?.bitcoinAddress;
-            }
-          } catch (error) {
+          if (request.ok) {
+            document.getElementById("fullName").textContent =
+              response?.data?.firstName + " " + response?.data?.lastName;
+          } else {
             Toastify({
-              text: error?.message || "Failed to fetch data",
+              text: response?.description || "Failed to fetch data",
               duration: 3000,
               gravity: "top",
               position: "center",
               backgroundColor: "#dc3545",
             }).showToast();
-          } finally {
-            hideLoadingSpinner();
+
+            if (
+              response?.description === "Not authenticated" ||
+              userDetailsResponse?.description === "Not authenticated"
+            ) {
+              localStorage.removeItem("adminToken");
+              window.location.href = "/admin/login";
+            }
           }
+          if (userDetailsRequest.ok) {
+            const data = userDetailsResponse.data;
+            document.getElementById("balance").value = data?.activeDeposit;
+            document.getElementById("profits").value = data?.profit;
+            document.getElementById("username").value = data?.userName;
+            document.getElementById("bitcoinAddress").value =
+              data?.bitcoinAddress;
+          }
+        } catch (error) {
+          Toastify({
+            text: error?.message || "Failed to fetch data",
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+            backgroundColor: "#dc3545",
+          }).showToast();
+        } finally {
+          hideLoadingSpinner();
+        }
+      }
+    });
+
+    document
+      .getElementById("edit-user-form")
+      .addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        let accountBalance = document.getElementById("balance").value;
+        let profits = document.getElementById("profits").value;
+        let userName = document.getElementById("username").value;
+        let bitcoinAddress = document.getElementById("bitcoinAddress").value;
+
+        const submitBtn = document.getElementById(
+          "submit-btn-text-edit-user"
+        );
+        submitBtn.textContent = "Please wait...";
+        submitBtn.disabled = true;
+        showLoadingSpinner();
+        const formData = {
+          accountBalance,
+          profits,
+          userName,
+          ...(bitcoinAddress.length > 0 ? { bitcoinAddress } : {}),
+        };
+
+        try {
+          const response = await fetch(
+            "https://api.exquisiteinvestmentlimited.com/api/v1/admin/user/details",
+            {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
+              },
+              body: JSON.stringify(formData),
+            }
+          );
+          const result = await response.json();
+          if (response.ok) {
+            Toastify({
+              text: "User details updated.",
+              duration: 3000,
+              gravity: "top",
+              position: "center",
+              backgroundColor: "#28a745",
+            }).showToast();
+            setTimeout(() => {
+              window.location.reload();
+            }, 1000);
+          } else {
+            Toastify({
+              text: `Error: ${result.description || "Failed to update user details."
+                }`,
+              duration: 3000,
+              gravity: "top",
+              position: "center",
+              backgroundColor: "#dc3545",
+            }).showToast();
+            if (response?.description === "Not authenticated") {
+              localStorage.removeItem("token");
+              window.location.href = "/admin/login";
+            }
+          }
+        } catch (error) {
+          Toastify({
+            text: error?.message || "Failed to update user details.",
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+            backgroundColor: "#dc3545",
+          }).showToast();
+        } finally {
+          hideLoadingSpinner();
+          submitBtn.textContent = "Update details";
+          submitBtn.disabled = false;
         }
       });
 
-      document
-        .getElementById("edit-user-form")
-        .addEventListener("submit", async (e) => {
-          e.preventDefault();
+    document
+      .getElementById("delete-user-form")
+      .addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-          let accountBalance = document.getElementById("balance").value;
-          let profits = document.getElementById("profits").value;
-          let userName = document.getElementById("username").value;
-          let bitcoinAddress = document.getElementById("bitcoinAddress").value;
+        let userName = document.getElementById("usernameToBeDeleted").value;
 
-          const submitBtn = document.getElementById(
-            "submit-btn-text-edit-user"
-          );
-          submitBtn.textContent = "Please wait...";
-          submitBtn.disabled = true;
-          showLoadingSpinner();
-          const formData = {
-            accountBalance,
-            profits,
-            userName,
-            ...(bitcoinAddress.length > 0 ? { bitcoinAddress } : {}),
-          };
-
-          try {
-            const response = await fetch(
-              "https://exquisute-backend.onrender.com/api/v1/admin/user/details",
-              {
-                method: "PUT",
-                headers: {
-                  "Content-Type": "application/json",
-                  Authorization: `Bearer ${token}`,
-                },
-                body: JSON.stringify(formData),
-              }
-            );
-            const result = await response.json();
-            if (response.ok) {
-              Toastify({
-                text: "User details updated.",
-                duration: 3000,
-                gravity: "top",
-                position: "center",
-                backgroundColor: "#28a745",
-              }).showToast();
-              setTimeout(() => {
-                window.location.reload();
-              }, 1000);
-            } else {
-              Toastify({
-                text: `Error: ${
-                  result.description || "Failed to update user details."
-                }`,
-                duration: 3000,
-                gravity: "top",
-                position: "center",
-                backgroundColor: "#dc3545",
-              }).showToast();
-              if (response?.description === "Not authenticated") {
-                localStorage.removeItem("token");
-                window.location.href = "/admin/login";
-              }
-            }
-          } catch (error) {
-            Toastify({
-              text: error?.message || "Failed to update user details.",
-              duration: 3000,
-              gravity: "top",
-              position: "center",
-              backgroundColor: "#dc3545",
-            }).showToast();
-          } finally {
-            hideLoadingSpinner();
-            submitBtn.textContent = "Update details";
-            submitBtn.disabled = false;
-          }
-        });
-
-      document
-        .getElementById("delete-user-form")
-        .addEventListener("submit", async (e) => {
-          e.preventDefault();
-
-          let userName = document.getElementById("usernameToBeDeleted").value;
-
-          const submitBtn = document.getElementById(
-            "submit-btn-text-delete-user"
-          );
-          submitBtn.textContent = "Please wait...";
-          submitBtn.disabled = true;
-          showLoadingSpinner();
-
-          try {
-            const response = await fetch(
-              `https://exquisute-backend.onrender.com/api/v1/admin/user/details?userName=${userName}`,
-              {
-                method: "DELETE",
-                headers: {
-                  "Content-Type": "application/json",
-                  Authorization: `Bearer ${token}`,
-                },
-              }
-            );
-            const result = await response.json();
-            if (response.ok) {
-              hideLoadingSpinner();
-              window.location.href = "/admin/dashboard";
-            } else {
-              Toastify({
-                text: `Error: ${
-                  result.description || "Failed to delete user."
-                }`,
-                duration: 3000,
-                gravity: "top",
-                position: "center",
-                backgroundColor: "#dc3545",
-              }).showToast();
-              if (response?.description === "Not authenticated") {
-                localStorage.removeItem("token");
-                window.location.href = "/admin/login";
-              }
-            }
-          } catch (error) {
-            Toastify({
-              text: error?.message || "Failed to delete user.",
-              duration: 3000,
-              gravity: "top",
-              position: "center",
-              backgroundColor: "#dc3545",
-            }).showToast();
-          } finally {
-            hideLoadingSpinner();
-            submitBtn.textContent = "Delete user";
-            submitBtn.disabled = false;
-          }
-        });
-
-      function handleLogout() {
-        localStorage.removeItem("token");
-        window.location.href = "/admin/login";
-      }
-    </script>
-
-    <script src="../../../dashboard-assets/js/vendor.min.js"></script>
-
-    <!-- App js -->
-    <script src="../../../dashboard-assets/js/app.min.js"></script>
-
-    <!-- Chat app -->
-    <script src="../../../dashboard-assets/js/pages/jquery.chat.js"></script>
-
-    <!-- Todo app -->
-    <script src="../../../dashboard-assets/js/pages/jquery.todo.js"></script>
-
-    <!-- Dashboard init JS -->
-    <script src="../../../dashboard-assets/js/pages/dashboard-3.init.js"></script>
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          { pageLanguage: "en" },
-          "google_translate_element"
+        const submitBtn = document.getElementById(
+          "submit-btn-text-delete-user"
         );
-      }
-    </script>
-    <script
-      type="text/javascript"
-      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script>
-  </body>
+        submitBtn.textContent = "Please wait...";
+        submitBtn.disabled = true;
+        showLoadingSpinner();
+
+        try {
+          const response = await fetch(
+            `https://api.exquisiteinvestmentlimited.com/api/v1/admin/user/details?userName=${userName}`,
+            {
+              method: "DELETE",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
+          const result = await response.json();
+          if (response.ok) {
+            hideLoadingSpinner();
+            window.location.href = "/admin/dashboard";
+          } else {
+            Toastify({
+              text: `Error: ${result.description || "Failed to delete user."
+                }`,
+              duration: 3000,
+              gravity: "top",
+              position: "center",
+              backgroundColor: "#dc3545",
+            }).showToast();
+            if (response?.description === "Not authenticated") {
+              localStorage.removeItem("token");
+              window.location.href = "/admin/login";
+            }
+          }
+        } catch (error) {
+          Toastify({
+            text: error?.message || "Failed to delete user.",
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+            backgroundColor: "#dc3545",
+          }).showToast();
+        } finally {
+          hideLoadingSpinner();
+          submitBtn.textContent = "Delete user";
+          submitBtn.disabled = false;
+        }
+      });
+
+    function handleLogout() {
+      localStorage.removeItem("token");
+      window.location.href = "/admin/login";
+    }
+  </script>
+
+  <script src="../../../dashboard-assets/js/vendor.min.js"></script>
+
+  <!-- App js -->
+  <script src="../../../dashboard-assets/js/app.min.js"></script>
+
+  <!-- Chat app -->
+  <script src="../../../dashboard-assets/js/pages/jquery.chat.js"></script>
+
+  <!-- Todo app -->
+  <script src="../../../dashboard-assets/js/pages/jquery.todo.js"></script>
+
+  <!-- Dashboard init JS -->
+  <script src="../../../dashboard-assets/js/pages/dashboard-3.init.js"></script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: "en" },
+        "google_translate_element"
+      );
+    }
+  </script>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
 </html>
